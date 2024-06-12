@@ -1,7 +1,7 @@
 import Foundation
 
 public protocol APIClientProtocol {
-  func getAstronomyPicturesURL(startDate: String, endDate: String) async -> Result<
+  func getAstronomyPictures(startDate: String, endDate: String) async -> Result<
     [AstronomyPictureDataModel], APIError
   >
 }
@@ -13,7 +13,7 @@ public class APIClient: APIClientProtocol {
     self.api = api
   }
 
-  public func getAstronomyPicturesURL(startDate: String, endDate: String) async -> Result<
+  public func getAstronomyPictures(startDate: String, endDate: String) async -> Result<
     [AstronomyPictureDataModel], APIError
   > {
     await api.getAstronomyPicturesURL(startDate: startDate, endDate: endDate)

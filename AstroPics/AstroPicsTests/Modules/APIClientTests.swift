@@ -8,7 +8,7 @@ final class APIClientTests: XCTestCase {
     let apiClient = APIClient.mock
 
     // When
-    let result = await apiClient.getAstronomyPicturesURL(startDate: "2024-06-01", endDate: "2024-06-07")
+    let result = await apiClient.getAstronomyPictures(startDate: "2024-06-01", endDate: "2024-06-07")
 
     // Then
     switch result {
@@ -24,7 +24,7 @@ final class APIClientTests: XCTestCase {
     let apiClient = APIClient.failureMock
 
     // When
-    let result = await apiClient.getAstronomyPicturesURL(startDate: "2024-06-01", endDate: "2024-06-07")
+    let result = await apiClient.getAstronomyPictures(startDate: "2024-06-01", endDate: "2024-06-07")
 
     // Then
     switch result {
