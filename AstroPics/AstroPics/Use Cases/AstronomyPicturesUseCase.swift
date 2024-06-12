@@ -6,6 +6,7 @@ public struct AstronomyPicture: Equatable, Identifiable, Hashable {
   let title: String
   let url: URL?
   let hasVideoContent: Bool
+  let explanation: String
 }
 
 public protocol AstronomyPicturesUseCase {
@@ -31,7 +32,8 @@ public struct AstronomyPicturesUseCaseImpl: AstronomyPicturesUseCase {
             date: Date.transformDateStringToCurrentLocale(dataModel.date, locale: locale),
             title: dataModel.title,
             url: dataModel.url,
-            hasVideoContent: dataModel.media_type == .video
+            hasVideoContent: dataModel.media_type == .video,
+            explanation: dataModel.explanation
           )
         }
         return .success(pictures)

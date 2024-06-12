@@ -67,7 +67,8 @@ extension AstronomyPicturesView {
                 date: Placeholder.shortText,
                 title: Placeholder.longText,
                 url: nil,
-                hasVideoContent: false
+                hasVideoContent: false,
+                explanation: Placeholder.longText
               )
           )
           .redacted(reason: .placeholder)
