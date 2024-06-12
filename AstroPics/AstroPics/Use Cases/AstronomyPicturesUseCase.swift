@@ -9,30 +9,24 @@ public struct AstronomyPicture: Equatable, Identifiable {
 }
 
 public protocol AstronomyPicturesUseCase {
-  func fetchAstronomyPictures() -> Effect<Result<[AstronomyPicture], APIError>>
+  func fetchAstronomyPictures() async -> Result<[AstronomyPicture], APIError>
 }
 
 public struct AstronomyPicturesUseCaseImpl: AstronomyPicturesUseCase {
   @Dependency(\.apiClient) var apiClient
 
-  public func fetchAstronomyPictures() -> Effect<Result<[AstronomyPicture], APIError>> {
-    return .run { send in
+  public func fetchAstronomyPictures() async -> Result<[AstronomyPicture], APIError> {
+    do {
       let result = await apiClient.getAstronomyPictures(startDate: "2024-01-01", endDate: "2024-01-07")
+
       switch result {
-      case .success(let astronomyPicturesData):
-        let items = astronomyPicturesData.map {
-          AstronomyPicture(id: $0.url, date: $0.date, title: $0.title, url: $0.url)
+      case .success(let dataModels):
+        let pictures = dataModels.map { dataModel in
+          AstronomyPicture(id: dataModel.url, date: dataModel.date, title: dataModel.title, url: dataModel.url)
         }
-        return await send(.success(items))
+        return .success(pictures)
       case .failure(let error):
-        return await send(.failure(error))
-      }
-    } catch: { error, send in
-      // Assuming `error` can be cast to `APIError`
-      if let apiError = error as? APIError {
-        return await send(.failure(apiError))
-      } else {
-        return await send(.failure(.unknown))
+        return .failure(error)
       }
     }
   }

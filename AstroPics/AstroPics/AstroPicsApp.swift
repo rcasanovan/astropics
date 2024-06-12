@@ -9,9 +9,15 @@ import SwiftUI
 
 @main
 struct AstroPicsApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
+  var body: some Scene {
+    WindowGroup {
+      AstronomyPicturesView(
+        store: .init(
+          initialState: AstronomyPictures.State()
+        ) {
+          AstronomyPictures(astronomyPicturesUseCase: AstronomyPicturesUseCaseImpl())
         }
+      )
     }
+  }
 }

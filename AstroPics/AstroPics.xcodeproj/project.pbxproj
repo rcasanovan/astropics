@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		92E31CB22C19B63C00948343 /* AstroPicsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E31CB12C19B63C00948343 /* AstroPicsApp.swift */; };
-		92E31CB42C19B63C00948343 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E31CB32C19B63C00948343 /* ContentView.swift */; };
 		92E31CB62C19B63D00948343 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92E31CB52C19B63D00948343 /* Assets.xcassets */; };
 		92E31CBA2C19B63D00948343 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92E31CB92C19B63D00948343 /* Preview Assets.xcassets */; };
 		92E31CEB2C19B7D500948343 /* AstronomyPicture+Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E31CDD2C19B7D500948343 /* AstronomyPicture+Mocks.swift */; };
@@ -24,6 +23,8 @@
 		92E31CF82C19BAF000948343 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 92E31CF72C19BAF000948343 /* ComposableArchitecture */; };
 		92E31CFB2C19BDE000948343 /* APIClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E31CFA2C19BDE000948343 /* APIClientTests.swift */; };
 		92E31CFE2C19BF8200948343 /* AstronomyPicturesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E31CFD2C19BF8200948343 /* AstronomyPicturesUseCase.swift */; };
+		92E31D0A2C19CDEF00948343 /* AstronomyPicturesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E31D082C19CDEF00948343 /* AstronomyPicturesView.swift */; };
+		92E31D0B2C19CDEF00948343 /* AstronomyPictures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E31D092C19CDEF00948343 /* AstronomyPictures.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +47,6 @@
 /* Begin PBXFileReference section */
 		92E31CAE2C19B63C00948343 /* AstroPics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AstroPics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92E31CB12C19B63C00948343 /* AstroPicsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstroPicsApp.swift; sourceTree = "<group>"; };
-		92E31CB32C19B63C00948343 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		92E31CB52C19B63D00948343 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		92E31CB72C19B63D00948343 /* AstroPics.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AstroPics.entitlements; sourceTree = "<group>"; };
 		92E31CB92C19B63D00948343 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -64,6 +64,8 @@
 		92E31CE92C19B7D500948343 /* BaseAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseAPI.swift; sourceTree = "<group>"; };
 		92E31CFA2C19BDE000948343 /* APIClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientTests.swift; sourceTree = "<group>"; };
 		92E31CFD2C19BF8200948343 /* AstronomyPicturesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyPicturesUseCase.swift; sourceTree = "<group>"; };
+		92E31D082C19CDEF00948343 /* AstronomyPicturesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyPicturesView.swift; sourceTree = "<group>"; };
+		92E31D092C19CDEF00948343 /* AstronomyPictures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyPictures.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,7 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				92E31CB12C19B63C00948343 /* AstroPicsApp.swift */,
-				92E31CB32C19B63C00948343 /* ContentView.swift */,
+				92E31D022C19CD8700948343 /* Features */,
 				92E31CFC2C19BF5300948343 /* Use Cases */,
 				92E31CDC2C19B7C500948343 /* Modules */,
 				92E31CB52C19B63D00948343 /* Assets.xcassets */,
@@ -212,6 +214,23 @@
 				92E31CFD2C19BF8200948343 /* AstronomyPicturesUseCase.swift */,
 			);
 			path = "Use Cases";
+			sourceTree = "<group>";
+		};
+		92E31D022C19CD8700948343 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				92E31D032C19CDA300948343 /* AstronomyPictures */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		92E31D032C19CDA300948343 /* AstronomyPictures */ = {
+			isa = PBXGroup;
+			children = (
+				92E31D092C19CDEF00948343 /* AstronomyPictures.swift */,
+				92E31D082C19CDEF00948343 /* AstronomyPicturesView.swift */,
+			);
+			path = AstronomyPictures;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -350,7 +369,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92E31CB42C19B63C00948343 /* ContentView.swift in Sources */,
 				92E31CEF2C19B7D500948343 /* APIClient.swift in Sources */,
 				92E31CEC2C19B7D500948343 /* AstronomyPictureDataModel.swift in Sources */,
 				92E31CF02C19B7D500948343 /* APIClient+Live.swift in Sources */,
@@ -363,6 +381,8 @@
 				92E31CF42C19B7D500948343 /* BaseAPI.swift in Sources */,
 				92E31CB22C19B63C00948343 /* AstroPicsApp.swift in Sources */,
 				92E31CF32C19B7D500948343 /* APIError.swift in Sources */,
+				92E31D0A2C19CDEF00948343 /* AstronomyPicturesView.swift in Sources */,
+				92E31D0B2C19CDEF00948343 /* AstronomyPictures.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
