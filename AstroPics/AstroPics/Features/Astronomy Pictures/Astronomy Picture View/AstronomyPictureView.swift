@@ -8,7 +8,7 @@ struct AstronomyPictureView: View {
   var body: some View {
     ZStack {
       if astronomyPicture.hasVideoContent {
-        Color.red
+        Color.black
           .frame(maxHeight: 140)
       } else {
         if let url = astronomyPicture.url {

@@ -9,7 +9,7 @@ import ComposableArchitecture
 import SwiftUI
 
 struct AstronomyPictureDetailView: View {
-  private let pictureGradient = Gradient(colors: [Color.black.opacity(0.0), Color.black.opacity(0.4)])
+  private let pictureGradient = Gradient(colors: [Color.black.opacity(0.0), Color.black.opacity(0.5)])
 
   @State private var scale: CGFloat = 1.0
 
@@ -23,32 +23,37 @@ struct AstronomyPictureDetailView: View {
   private var content: some View {
     WithViewStore(store, observe: { $0 }) { viewStore in
       ZStack {
-        if let url = viewStore.astronomyPicture.url {
-          GeometryReader { geometry in
-            AsyncImage(url: url) { phase in
-              switch phase {
-              case .success(let image):
-                image
-                  .resizable()
-                  .aspectRatio(contentMode: .fill)
-                  .frame(width: geometry.size.width, height: geometry.size.height)
-                  .clipped()
-              case .failure:
-                Text("Failed to load image")
-                  .frame(maxWidth: .infinity, maxHeight: .infinity)
-                  .background(Color.white)
-              case .empty:
-                Color.white
-                  .frame(maxWidth: .infinity, maxHeight: .infinity)
-              @unknown default:
-                // Handle unknown state
-                EmptyView()
+        if viewStore.astronomyPicture.hasVideoContent {
+          Color.black
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+        } else {
+          if let url = viewStore.astronomyPicture.url {
+            GeometryReader { geometry in
+              AsyncImage(url: url) { phase in
+                switch phase {
+                case .success(let image):
+                  image
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: geometry.size.width, height: geometry.size.height)
+                    .clipped()
+                case .failure:
+                  Text("Failed to load image")
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .background(Color.white)
+                case .empty:
+                  Color.white
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                @unknown default:
+                  // Handle unknown state
+                  EmptyView()
+                }
               }
             }
+          } else {
+            Color.gray
+              .frame(maxWidth: .infinity, maxHeight: .infinity)
           }
-        } else {
-          Color.gray
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
 
         if viewStore.astronomyPicture.url != nil {
@@ -62,6 +67,28 @@ struct AstronomyPictureDetailView: View {
 
         VStack(alignment: .leading, spacing: 8) {
           Spacer()
+
+          if viewStore.astronomyPicture.hasVideoContent {
+            VStack {
+              Spacer()
+              HStack {
+                Spacer()
+                Button(
+                  action: {
+                    store.send(.didTapOnPlayVideo)
+                  },
+                  label: {
+                    Image("PlayIcon")
+                      .resizable()
+                      .frame(width: 70, height: 70)
+                      .foregroundColor(.white)
+                  }
+                )
+                Spacer()
+              }
+              Spacer()
+            }
+          }
 
           separator()
 

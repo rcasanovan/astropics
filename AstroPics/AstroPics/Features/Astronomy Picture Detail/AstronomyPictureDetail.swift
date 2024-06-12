@@ -7,6 +7,7 @@
 
 import ComposableArchitecture
 import Foundation
+import SwiftUI
 
 public struct AstronomyPictureDetail: Reducer {
   //__ The basic state. Feel free to change this if needed.
@@ -16,32 +17,28 @@ public struct AstronomyPictureDetail: Reducer {
 
   //__ The basic actions. Feel free to change this if needed.
   public enum Action: Equatable {
-    case didReceiveTitle(String)
-    case onAppear
+    case didTapOnPlayVideo
   }
-
-  //__ You can add more properties if needed.
-  //__ e.g: private let useCase: UseCase
-  //__ If this is the case, you'll need to implement the init()
 
   public var body: some Reducer<State, Action> {
     Reduce { state, action in
       switch action {
-      case .didReceiveTitle(let title):
+      case .didTapOnPlayVideo:
+        guard let url = state.astronomyPicture.url else {
+          return .none
+        }
+
+        openURLInBrowser(url: url)
         return .none
-      case .onAppear:
-        return self.loadEffect()
       }
     }
   }
 }
 
 extension AstronomyPictureDetail {
-  //__ A default load effect. Feel free to change this if needed.
-  //__ You can include API calls, database calls or any use case call if needed.
-  fileprivate func loadEffect() -> Effect<AstronomyPictureDetail.Action> {
-    return .run { send in
-      return await send(.didReceiveTitle("test title"))
+  fileprivate func openURLInBrowser(url: URL) {
+    if UIApplication.shared.canOpenURL(url) {
+      UIApplication.shared.open(url, options: [:], completionHandler: nil)
     }
   }
 }
