@@ -1,10 +1,3 @@
-//
-//  AstronomyPicturesView.swift
-//  AstroPics
-//
-//  Created by Ricardo Casanova on 12/6/24.
-//
-
 import ComposableArchitecture
 import SwiftUI
 
