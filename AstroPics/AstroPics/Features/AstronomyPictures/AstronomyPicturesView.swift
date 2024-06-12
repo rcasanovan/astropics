@@ -19,7 +19,6 @@ struct AstronomyPicturesView: View {
   //__ This content view
   private var content: some View {
     WithViewStore(store, observe: { $0 }) { viewStore in
-      Text(viewStore.title)
     }
   }
 

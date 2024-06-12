@@ -11,7 +11,7 @@ import Foundation
 public struct AstronomyPictures: Reducer {
   //__ The basic state. Feel free to change this if needed.
   public struct State: Equatable {
-    public var title = ""
+    public var astronomycPictures: [AstronomyPicture] = []
   }
 
   //__ The basic actions. Feel free to change this if needed.
@@ -30,8 +30,8 @@ public struct AstronomyPictures: Reducer {
   public var body: some Reducer<State, Action> {
     Reduce { state, action in
       switch action {
-      case .didReceiveAstronomyPictures(let astronomicPictures):
-        print("test")
+      case .didReceiveAstronomyPictures(let astronomycPictures):
+        state.astronomycPictures = astronomycPictures
         return .none
 
       case .didReceiveError(let error):
