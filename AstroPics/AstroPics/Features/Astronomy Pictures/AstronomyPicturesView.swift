@@ -107,8 +107,9 @@ extension AstronomyPicturesView {
         }
         // Sticky Header
         HeaderView()
-          .background(Color.black)
+          .background(.black)
       }
+      .background(.black)
     }
   }
 

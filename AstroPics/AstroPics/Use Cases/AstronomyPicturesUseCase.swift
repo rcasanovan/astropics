@@ -20,8 +20,8 @@ public struct AstronomyPicturesUseCaseImpl: AstronomyPicturesUseCase {
   public func fetchAstronomyPictures() async -> Result<[AstronomyPicture], APIError> {
     do {
       let result = await apiClient.getAstronomyPictures(
-        startDate: Date.formattedDateSevenDaysAgo(),
-        endDate: Date.formattedCurrentDate()
+        startDate: Date.formattedDateDaysAgo(7),
+        endDate: Date.formattedDateDaysAgo(1)
       )
 
       switch result {

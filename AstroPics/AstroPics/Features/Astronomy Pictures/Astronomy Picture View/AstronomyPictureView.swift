@@ -58,7 +58,7 @@ struct AstronomyPictureView: View {
 
               Text(date)
                 .foregroundColor(.white)
-                .font(.headline)
+                .font(.subheadline)
             }
           }
 
@@ -66,9 +66,7 @@ struct AstronomyPictureView: View {
 
           Text(astronomyPicture.title)
             .foregroundColor(.white)
-            .font(.title3)
-            .fontWeight(.bold)
-
+            .font(.subheadline)
         }
         .padding(16)
 

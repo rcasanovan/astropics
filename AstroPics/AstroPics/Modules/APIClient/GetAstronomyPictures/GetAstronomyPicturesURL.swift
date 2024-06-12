@@ -19,7 +19,7 @@ extension BaseAPI {
     components.host = Constants.baseUrl
     components.path = Constants.path
     components.queryItems = [
-      URLQueryItem(name: Constants.Parameters.apiKey, value: "DEMO_KEY"),
+      URLQueryItem(name: Constants.Parameters.apiKey, value: "jDP6589RjEUaYCoCD0O74hGjvbEQASdnNMANRKH4"),
       URLQueryItem(name: Constants.Parameters.startDate, value: startDate),
       URLQueryItem(name: Constants.Parameters.endDate, value: endDate),
     ]

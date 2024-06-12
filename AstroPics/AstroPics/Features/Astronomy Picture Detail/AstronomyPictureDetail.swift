@@ -10,13 +10,13 @@ public struct AstronomyPictureDetail: Reducer {
 
   //__ The basic actions. Feel free to change this if needed.
   public enum Action: Equatable {
-    case didTapOnPlayVideo
+    case didTapOnLoadContent
   }
 
   public var body: some Reducer<State, Action> {
     Reduce { state, action in
       switch action {
-      case .didTapOnPlayVideo:
+      case .didTapOnLoadContent:
         guard let url = state.astronomyPicture.url else {
           return .none
         }

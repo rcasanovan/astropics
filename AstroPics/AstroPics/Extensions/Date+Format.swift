@@ -7,9 +7,9 @@ extension Date {
     return formatter.string(from: Date())
   }
 
-  static func formattedDateSevenDaysAgo() -> String {
+  static func formattedDateDaysAgo(_ days: Int) -> String {
     let calendar = Calendar.current
-    if let dateSevenDaysAgo = calendar.date(byAdding: .day, value: -6, to: Date()) {
+    if let dateSevenDaysAgo = calendar.date(byAdding: .day, value: -days, to: Date()) {
       let formatter = DateFormatter()
       formatter.dateFormat = "yyyy-MM-dd"
       return formatter.string(from: dateSevenDaysAgo)

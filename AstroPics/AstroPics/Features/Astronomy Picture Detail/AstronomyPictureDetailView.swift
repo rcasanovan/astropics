@@ -10,6 +10,13 @@ struct AstronomyPictureDetailView: View {
 
   public init(store: Store<AstronomyPictureDetail.State, AstronomyPictureDetail.Action>) {
     self.store = store
+
+    let appearance = UINavigationBarAppearance()
+    appearance.configureWithOpaqueBackground()
+    appearance.backgroundColor = .black
+
+    UINavigationBar.appearance().standardAppearance = appearance
+    UINavigationBar.appearance().scrollEdgeAppearance = appearance
   }
 
   @ViewBuilder
@@ -68,7 +75,7 @@ struct AstronomyPictureDetailView: View {
                 Spacer()
                 Button(
                   action: {
-                    store.send(.didTapOnPlayVideo)
+                    store.send(.didTapOnLoadContent)
                   },
                   label: {
                     Image("PlayIcon")
@@ -93,6 +100,17 @@ struct AstronomyPictureDetailView: View {
           separator()
         }
         .padding(.bottom, 64)
+      }
+    }
+    .background(.black)
+    .toolbar {
+      ToolbarItem(placement: .navigationBarTrailing) {
+        Button(action: {
+          store.send(.didTapOnLoadContent)
+        }) {
+          Image("FullScreenIcon")
+            .foregroundColor(.white)
+        }
       }
     }
   }
