@@ -39,7 +39,7 @@ struct AstronomyPicturesView: View {
 
 #Preview {
   let store: Store<AstronomyPictures.State, AstronomyPictures.Action> = .init(
-    initialState: AstronomyPictures.State()
+    initialState: .success
   ) {
     AstronomyPictures(astronomyPicturesUseCase: AstronomyPicturesUseCaseImpl(apiClient: APIClient.mock))
   }

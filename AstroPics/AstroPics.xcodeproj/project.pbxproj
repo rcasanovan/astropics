@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		922DC7752C19EE9500E90438 /* NetworkState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922DC7742C19EE9500E90438 /* NetworkState.swift */; };
+		922DC7772C19EFD700E90438 /* AstronomyPictures+Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922DC7762C19EFD700E90438 /* AstronomyPictures+Mocks.swift */; };
 		92E31CB22C19B63C00948343 /* AstroPicsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E31CB12C19B63C00948343 /* AstroPicsApp.swift */; };
 		92E31CB62C19B63D00948343 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92E31CB52C19B63D00948343 /* Assets.xcassets */; };
 		92E31CBA2C19B63D00948343 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92E31CB92C19B63D00948343 /* Preview Assets.xcassets */; };
@@ -38,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		922DC7742C19EE9500E90438 /* NetworkState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkState.swift; sourceTree = "<group>"; };
+		922DC7762C19EFD700E90438 /* AstronomyPictures+Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AstronomyPictures+Mocks.swift"; sourceTree = "<group>"; };
 		92E31CAE2C19B63C00948343 /* AstroPics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AstroPics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92E31CB12C19B63C00948343 /* AstroPicsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstroPicsApp.swift; sourceTree = "<group>"; };
 		92E31CB52C19B63D00948343 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -213,6 +217,8 @@
 			children = (
 				92E31D092C19CDEF00948343 /* AstronomyPictures.swift */,
 				92E31D082C19CDEF00948343 /* AstronomyPicturesView.swift */,
+				922DC7742C19EE9500E90438 /* NetworkState.swift */,
+				922DC7762C19EFD700E90438 /* AstronomyPictures+Mocks.swift */,
 			);
 			path = AstronomyPictures;
 			sourceTree = "<group>";
@@ -331,11 +337,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				922DC7752C19EE9500E90438 /* NetworkState.swift in Sources */,
 				92E31CEF2C19B7D500948343 /* APIClient.swift in Sources */,
 				92E31CEC2C19B7D500948343 /* AstronomyPictureDataModel.swift in Sources */,
 				92E31CF02C19B7D500948343 /* APIClient+Live.swift in Sources */,
 				92E31CED2C19B7D500948343 /* GetAstronomyPicturesURL.swift in Sources */,
 				92E31CFE2C19BF8200948343 /* AstronomyPicturesUseCase.swift in Sources */,
+				922DC7772C19EFD700E90438 /* AstronomyPictures+Mocks.swift in Sources */,
 				92E31CEB2C19B7D500948343 /* AstronomyPicture+Mocks.swift in Sources */,
 				92E31CF12C19B7D500948343 /* APIClient+Mocks.swift in Sources */,
 				92E31CEE2C19B7D500948343 /* API.swift in Sources */,

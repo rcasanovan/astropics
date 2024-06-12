@@ -11,7 +11,12 @@ import Foundation
 public struct AstronomyPictures: Reducer {
   //__ The basic state. Feel free to change this if needed.
   public struct State: Equatable {
-    public var astronomycPictures: [AstronomyPicture] = []
+    /// The current network state for the feature
+    var networkState: NetworkState<[AstronomyPicture], AstronomyPictures.Error>
+
+    public init(networkState: NetworkState<[AstronomyPicture], AstronomyPictures.Error>) {
+      self.networkState = networkState
+    }
   }
 
   //__ The basic actions. Feel free to change this if needed.
@@ -31,7 +36,7 @@ public struct AstronomyPictures: Reducer {
     Reduce { state, action in
       switch action {
       case .didReceiveAstronomyPictures(let astronomycPictures):
-        state.astronomycPictures = astronomycPictures
+        state.networkState = .completed(.success(astronomycPictures))
         return .none
 
       case .didReceiveError(let error):
@@ -67,3 +72,15 @@ extension AstronomyPictures {
     case cannotLoadPictures(error: String)
   }
 }
+
+#if DEBUG
+
+extension AstronomyPictures.State {
+  static let loading = Self(networkState: .loading)
+
+  static let success = Self(networkState: .completed(.success(.mock)))
+
+  static let failure = Self(networkState: .completed(.failure(.cannotLoadPictures(error: "error"))))
+}
+
+#endif

@@ -4,7 +4,8 @@ public struct AstronomyPicture: Equatable, Identifiable {
   public let id: String
   let date: String
   let title: String
-  let url: String
+  let url: URL
+  let hasVideoContent: Bool
 }
 
 public protocol AstronomyPicturesUseCase {
@@ -21,7 +22,13 @@ public struct AstronomyPicturesUseCaseImpl: AstronomyPicturesUseCase {
       switch result {
       case .success(let dataModels):
         let pictures = dataModels.map { dataModel in
-          AstronomyPicture(id: dataModel.url, date: dataModel.date, title: dataModel.title, url: dataModel.url)
+          AstronomyPicture(
+            id: dataModel.url.absoluteString,
+            date: dataModel.date,
+            title: dataModel.title,
+            url: dataModel.url,
+            hasVideoContent: dataModel.media_type == .video
+          )
         }
         return .success(pictures)
       case .failure(let error):

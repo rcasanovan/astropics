@@ -13,7 +13,7 @@ struct AstroPicsApp: App {
     WindowGroup {
       AstronomyPicturesView(
         store: .init(
-          initialState: AstronomyPictures.State()
+          initialState: .init(networkState: .ready)
         ) {
           AstronomyPictures(astronomyPicturesUseCase: AstronomyPicturesUseCaseImpl(apiClient: APIClient.live))
         }
