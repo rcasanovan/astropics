@@ -40,9 +40,15 @@ public struct AstronomyPictures: Reducer {
         return .none
 
       case .didReceiveError(let error):
+        state.networkState = .completed(.failure(error))
         return .none
 
       case .onAppear:
+        guard case .ready = state.networkState else {
+          return .none
+        }
+
+        state.networkState = .loading
         return self.loadEffect()
       }
     }
@@ -72,15 +78,3 @@ extension AstronomyPictures {
     case cannotLoadPictures(error: String)
   }
 }
-
-#if DEBUG
-
-extension AstronomyPictures.State {
-  static let loading = Self(networkState: .loading)
-
-  static let success = Self(networkState: .completed(.success(.mock)))
-
-  static let failure = Self(networkState: .completed(.failure(.cannotLoadPictures(error: "error"))))
-}
-
-#endif

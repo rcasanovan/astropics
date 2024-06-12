@@ -3,6 +3,14 @@ import Foundation
 
 #if DEBUG
 
+extension AstronomyPictures.State {
+  static let loading = Self(networkState: .loading)
+
+  static let success = Self(networkState: .completed(.success(.mock)))
+
+  static let failure = Self(networkState: .completed(.failure(.cannotLoadPictures(error: "error"))))
+}
+
 extension Array where Element == AstronomyPicture {
   static let mock = Self([
     .init(

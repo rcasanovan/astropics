@@ -6,7 +6,10 @@ import XCTest
 class AstronomyPicturesUseCaseTests: XCTestCase {
   func testFetchAstronomyPicturesSuccess() async {
     // Given
-    let useCase = AstronomyPicturesUseCaseImpl(apiClient: APIClient.mock)
+    let useCase = AstronomyPicturesUseCaseImpl(
+        apiClient: APIClient.mock,
+        locale: Locale(identifier: "en_US")
+    )
 
     // When
     let result = await useCase.fetchAstronomyPictures()
@@ -22,7 +25,10 @@ class AstronomyPicturesUseCaseTests: XCTestCase {
 
   func testFetchAstronomyPicturesFailure() async {
     // Given
-    let useCase = AstronomyPicturesUseCaseImpl(apiClient: APIClient.failureMock)
+    let useCase = AstronomyPicturesUseCaseImpl(
+        apiClient: APIClient.failureMock,
+        locale: Locale(identifier: "en_US")
+    )
 
     // When
     let result = await useCase.fetchAstronomyPictures()

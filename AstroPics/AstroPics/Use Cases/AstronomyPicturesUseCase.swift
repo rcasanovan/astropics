@@ -1,8 +1,8 @@
 import Foundation
 
-public struct AstronomyPicture: Equatable, Identifiable {
+public struct AstronomyPicture: Equatable, Identifiable, Hashable {
   public let id: String
-  let date: String
+  let date: String?
   let title: String
   let url: URL
   let hasVideoContent: Bool
@@ -14,17 +14,21 @@ public protocol AstronomyPicturesUseCase {
 
 public struct AstronomyPicturesUseCaseImpl: AstronomyPicturesUseCase {
   let apiClient: APIClientProtocol
+  let locale: Locale
 
   public func fetchAstronomyPictures() async -> Result<[AstronomyPicture], APIError> {
     do {
-      let result = await apiClient.getAstronomyPictures(startDate: "2024-01-01", endDate: "2024-01-07")
+      let result = await apiClient.getAstronomyPictures(
+        startDate: Date.formattedDateSevenDaysAgo(),
+        endDate: Date.formattedCurrentDate()
+      )
 
       switch result {
       case .success(let dataModels):
         let pictures = dataModels.map { dataModel in
           AstronomyPicture(
             id: dataModel.url.absoluteString,
-            date: dataModel.date,
+            date: Date.transformDateStringToCurrentLocale(dataModel.date, locale: locale),
             title: dataModel.title,
             url: dataModel.url,
             hasVideoContent: dataModel.media_type == .video
