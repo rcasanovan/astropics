@@ -10,6 +10,7 @@
 		922DC7752C19EE9500E90438 /* NetworkState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922DC7742C19EE9500E90438 /* NetworkState.swift */; };
 		922DC7772C19EFD700E90438 /* AstronomyPictures+Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922DC7762C19EFD700E90438 /* AstronomyPictures+Mocks.swift */; };
 		922DC77A2C19FB5000E90438 /* Date+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922DC7792C19FB5000E90438 /* Date+Format.swift */; };
+		922DC77D2C1A030100E90438 /* AstronomyPictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922DC77C2C1A030100E90438 /* AstronomyPictureView.swift */; };
 		92E31CB22C19B63C00948343 /* AstroPicsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E31CB12C19B63C00948343 /* AstroPicsApp.swift */; };
 		92E31CB62C19B63D00948343 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92E31CB52C19B63D00948343 /* Assets.xcassets */; };
 		92E31CBA2C19B63D00948343 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92E31CB92C19B63D00948343 /* Preview Assets.xcassets */; };
@@ -44,6 +45,7 @@
 		922DC7742C19EE9500E90438 /* NetworkState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkState.swift; sourceTree = "<group>"; };
 		922DC7762C19EFD700E90438 /* AstronomyPictures+Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AstronomyPictures+Mocks.swift"; sourceTree = "<group>"; };
 		922DC7792C19FB5000E90438 /* Date+Format.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Format.swift"; sourceTree = "<group>"; };
+		922DC77C2C1A030100E90438 /* AstronomyPictureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyPictureView.swift; sourceTree = "<group>"; };
 		92E31CAE2C19B63C00948343 /* AstroPics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AstroPics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92E31CB12C19B63C00948343 /* AstroPicsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstroPicsApp.swift; sourceTree = "<group>"; };
 		92E31CB52C19B63D00948343 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -91,6 +93,14 @@
 				922DC7792C19FB5000E90438 /* Date+Format.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		922DC77B2C1A02E800E90438 /* Astronomy Picture View */ = {
+			isa = PBXGroup;
+			children = (
+				922DC77C2C1A030100E90438 /* AstronomyPictureView.swift */,
+			);
+			path = "Astronomy Picture View";
 			sourceTree = "<group>";
 		};
 		92E31CA52C19B63C00948343 = {
@@ -226,6 +236,7 @@
 		92E31D032C19CDA300948343 /* AstronomyPictures */ = {
 			isa = PBXGroup;
 			children = (
+				922DC77B2C1A02E800E90438 /* Astronomy Picture View */,
 				922DC7742C19EE9500E90438 /* NetworkState.swift */,
 				922DC7762C19EFD700E90438 /* AstronomyPictures+Mocks.swift */,
 				92E31D092C19CDEF00948343 /* AstronomyPictures.swift */,
@@ -363,6 +374,7 @@
 				92E31CF32C19B7D500948343 /* APIError.swift in Sources */,
 				92E31D0A2C19CDEF00948343 /* AstronomyPicturesView.swift in Sources */,
 				922DC77A2C19FB5000E90438 /* Date+Format.swift in Sources */,
+				922DC77D2C1A030100E90438 /* AstronomyPictureView.swift in Sources */,
 				92E31D0B2C19CDEF00948343 /* AstronomyPictures.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

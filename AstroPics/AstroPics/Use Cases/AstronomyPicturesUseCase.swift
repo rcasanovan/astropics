@@ -4,7 +4,7 @@ public struct AstronomyPicture: Equatable, Identifiable, Hashable {
   public let id: String
   let date: String?
   let title: String
-  let url: URL
+  let url: URL?
   let hasVideoContent: Bool
 }
 

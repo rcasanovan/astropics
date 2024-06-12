@@ -23,13 +23,12 @@ struct AstronomyPicturesView: View {
       case .loading:
         placeholder()
       case let .completed(.success(astronomyPictures)):
-        VStack {
-          ForEach(astronomyPictures, id: \.self) { item in
-            if let date = item.date {
-              Text(date)
+        ScrollView {
+          VStack(spacing: 0) {
+            ForEach(astronomyPictures, id: \.self) { item in
+              AstronomyPictureView(astronomyPicture: item)
+              separator()
             }
-            Text(item.title)
-              .padding()
           }
         }
       case let .completed(.failure(error)):
@@ -56,9 +55,8 @@ struct AstronomyPicturesView: View {
 
 extension AstronomyPicturesView {
   enum Placeholder {
-    static let shortText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
-    static let longText =
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    static let shortText = "Lorem ipsum"
+    static let longText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
   }
 }
 
@@ -66,13 +64,32 @@ extension AstronomyPicturesView {
 
 extension AstronomyPicturesView {
   fileprivate func placeholder() -> some View {
-    VStack {
-      ForEach(0..<14) { _ in
-        Text(Placeholder.longText)
+    ScrollView {
+      VStack(spacing: 0) {
+        ForEach(0..<10) { index in
+          AstronomyPictureView(
+            astronomyPicture:
+              .init(
+                id: String(index),
+                date: Placeholder.shortText,
+                title: Placeholder.longText,
+                url: nil,
+                hasVideoContent: false
+              )
+          )
           .redacted(reason: .placeholder)
-          .padding()
+
+          separator()
+        }
       }
     }
+    .disabled(true)
+  }
+
+  fileprivate func separator() -> some View {
+    Divider()
+      .frame(height: 1)
+      .background(.white)
   }
 }
 
