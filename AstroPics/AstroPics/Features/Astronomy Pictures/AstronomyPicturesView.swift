@@ -50,49 +50,64 @@ extension AstronomyPicturesView {
 
 extension AstronomyPicturesView {
   fileprivate func placeholder() -> some View {
-    ScrollView {
-      VStack(spacing: 0) {
-        ForEach(0..<10) { index in
-          AstronomyPictureView(
-            astronomyPicture:
-              .init(
-                id: String(index),
-                date: Placeholder.shortText,
-                title: Placeholder.longText,
-                url: nil,
-                hasVideoContent: false,
-                explanation: Placeholder.longText
-              )
-          )
-          .redacted(reason: .placeholder)
+    ZStack(alignment: .top) {
+      ScrollView {
+        VStack(spacing: 0) {
+          Spacer().frame(height: 75)
 
-          separator()
+          ForEach(0..<10) { index in
+            AstronomyPictureView(
+              astronomyPicture:
+                .init(
+                  id: String(index),
+                  date: Placeholder.shortText,
+                  title: Placeholder.longText,
+                  url: nil,
+                  hasVideoContent: false,
+                  explanation: Placeholder.longText
+                )
+            )
+            .redacted(reason: .placeholder)
+
+            separator()
+          }
         }
       }
+      .disabled(true)
+
+      // Sticky Header
+      HeaderView()
+        .background(Color.black)
     }
-    .disabled(true)
   }
 
   fileprivate func success(with astronomyPictures: [AstronomyPicture]) -> some View {
     NavigationView {
-      ScrollView {
-        VStack(spacing: 0) {
-          ForEach(astronomyPictures, id: \.self) { item in
-            NavigationLink(
-              destination:
-                AstronomyPictureDetailView(
+      ZStack(alignment: .top) {
+        // Scrollable content
+        ScrollView {
+          VStack(spacing: 0) {
+            Spacer().frame(height: 75)
+
+            ForEach(astronomyPictures, id: \.self) { item in
+              NavigationLink(
+                destination: AstronomyPictureDetailView(
                   store: .init(
                     initialState: AstronomyPictureDetail.State(astronomyPicture: item)
                   ) {
                     AstronomyPictureDetail()
                   }
                 )
-            ) {
-              AstronomyPictureView(astronomyPicture: item)
+              ) {
+                AstronomyPictureView(astronomyPicture: item)
+              }
+              separator()
             }
-            separator()
           }
         }
+        // Sticky Header
+        HeaderView()
+          .background(Color.black)
       }
     }
   }
