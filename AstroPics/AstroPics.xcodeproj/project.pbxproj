@@ -25,6 +25,7 @@
 		92E31CF32C19B7D500948343 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E31CE82C19B7D500948343 /* APIError.swift */; };
 		92E31CF42C19B7D500948343 /* BaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E31CE92C19B7D500948343 /* BaseAPI.swift */; };
 		92E31CF82C19BAF000948343 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 92E31CF72C19BAF000948343 /* ComposableArchitecture */; };
+		92E31CFB2C19BDE000948343 /* APIClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E31CFA2C19BDE000948343 /* APIClientTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		92E31CE72C19B7D500948343 /* APIClientDependencies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClientDependencies.swift; sourceTree = "<group>"; };
 		92E31CE82C19B7D500948343 /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		92E31CE92C19B7D500948343 /* BaseAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseAPI.swift; sourceTree = "<group>"; };
+		92E31CFA2C19BDE000948343 /* APIClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 		92E31CC22C19B63D00948343 /* AstroPicsTests */ = {
 			isa = PBXGroup;
 			children = (
+				92E31CF92C19BDCE00948343 /* Modules */,
 				92E31CC32C19B63D00948343 /* AstroPicsTests.swift */,
 			);
 			path = AstroPicsTests;
@@ -207,6 +210,14 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		92E31CF92C19BDCE00948343 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				92E31CFA2C19BDE000948343 /* APIClientTests.swift */,
+			);
+			path = Modules;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -365,6 +376,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				92E31CC42C19B63D00948343 /* AstroPicsTests.swift in Sources */,
+				92E31CFB2C19BDE000948343 /* APIClientTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -530,7 +542,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.5;
@@ -568,7 +580,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.5;
