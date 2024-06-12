@@ -17,7 +17,6 @@
 		92E31CEF2C19B7D500948343 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E31CE42C19B7D500948343 /* APIClient.swift */; };
 		92E31CF02C19B7D500948343 /* APIClient+Live.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E31CE52C19B7D500948343 /* APIClient+Live.swift */; };
 		92E31CF12C19B7D500948343 /* APIClient+Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E31CE62C19B7D500948343 /* APIClient+Mocks.swift */; };
-		92E31CF22C19B7D500948343 /* APIClientDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E31CE72C19B7D500948343 /* APIClientDependencies.swift */; };
 		92E31CF32C19B7D500948343 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E31CE82C19B7D500948343 /* APIError.swift */; };
 		92E31CF42C19B7D500948343 /* BaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E31CE92C19B7D500948343 /* BaseAPI.swift */; };
 		92E31CF82C19BAF000948343 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 92E31CF72C19BAF000948343 /* ComposableArchitecture */; };
@@ -52,7 +51,6 @@
 		92E31CE42C19B7D500948343 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		92E31CE52C19B7D500948343 /* APIClient+Live.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "APIClient+Live.swift"; sourceTree = "<group>"; };
 		92E31CE62C19B7D500948343 /* APIClient+Mocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "APIClient+Mocks.swift"; sourceTree = "<group>"; };
-		92E31CE72C19B7D500948343 /* APIClientDependencies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClientDependencies.swift; sourceTree = "<group>"; };
 		92E31CE82C19B7D500948343 /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		92E31CE92C19B7D500948343 /* BaseAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseAPI.swift; sourceTree = "<group>"; };
 		92E31CFA2C19BDE000948343 /* APIClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientTests.swift; sourceTree = "<group>"; };
@@ -173,7 +171,6 @@
 				92E31CE42C19B7D500948343 /* APIClient.swift */,
 				92E31CE52C19B7D500948343 /* APIClient+Live.swift */,
 				92E31CE62C19B7D500948343 /* APIClient+Mocks.swift */,
-				92E31CE72C19B7D500948343 /* APIClientDependencies.swift */,
 				92E31CE82C19B7D500948343 /* APIError.swift */,
 				92E31CE92C19B7D500948343 /* BaseAPI.swift */,
 			);
@@ -337,7 +334,6 @@
 				92E31CEF2C19B7D500948343 /* APIClient.swift in Sources */,
 				92E31CEC2C19B7D500948343 /* AstronomyPictureDataModel.swift in Sources */,
 				92E31CF02C19B7D500948343 /* APIClient+Live.swift in Sources */,
-				92E31CF22C19B7D500948343 /* APIClientDependencies.swift in Sources */,
 				92E31CED2C19B7D500948343 /* GetAstronomyPicturesURL.swift in Sources */,
 				92E31CFE2C19BF8200948343 /* AstronomyPicturesUseCase.swift in Sources */,
 				92E31CEB2C19B7D500948343 /* AstronomyPicture+Mocks.swift in Sources */,

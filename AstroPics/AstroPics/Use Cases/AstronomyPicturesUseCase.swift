@@ -1,4 +1,3 @@
-import ComposableArchitecture
 import Foundation
 
 public struct AstronomyPicture: Equatable, Identifiable {
@@ -13,7 +12,7 @@ public protocol AstronomyPicturesUseCase {
 }
 
 public struct AstronomyPicturesUseCaseImpl: AstronomyPicturesUseCase {
-  @Dependency(\.apiClient) var apiClient
+  let apiClient: APIClientProtocol
 
   public func fetchAstronomyPictures() async -> Result<[AstronomyPicture], APIError> {
     do {

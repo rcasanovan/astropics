@@ -15,7 +15,7 @@ struct AstroPicsApp: App {
         store: .init(
           initialState: AstronomyPictures.State()
         ) {
-          AstronomyPictures(astronomyPicturesUseCase: AstronomyPicturesUseCaseImpl())
+          AstronomyPictures(astronomyPicturesUseCase: AstronomyPicturesUseCaseImpl(apiClient: APIClient.live))
         }
       )
     }

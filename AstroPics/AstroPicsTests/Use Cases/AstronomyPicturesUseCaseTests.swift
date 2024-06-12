@@ -6,13 +6,7 @@ import XCTest
 class AstronomyPicturesUseCaseTests: XCTestCase {
   func testFetchAstronomyPicturesSuccess() async {
     // Given
-    var dependencies = DependencyValues()
-    dependencies.apiClient = APIClient.mock
-    let useCase: AstronomyPicturesUseCase = withDependencies {
-      $0 = dependencies
-    } operation: {
-      AstronomyPicturesUseCaseImpl()
-    }
+    let useCase = AstronomyPicturesUseCaseImpl(apiClient: APIClient.mock)
 
     // When
     let result = await useCase.fetchAstronomyPictures()
@@ -28,13 +22,7 @@ class AstronomyPicturesUseCaseTests: XCTestCase {
 
   func testFetchAstronomyPicturesFailure() async {
     // Given
-    var dependencies = DependencyValues()
-    dependencies.apiClient = APIClient.failureMock
-    let useCase: AstronomyPicturesUseCase = withDependencies {
-      $0 = dependencies
-    } operation: {
-      AstronomyPicturesUseCaseImpl()
-    }
+    let useCase = AstronomyPicturesUseCaseImpl(apiClient: APIClient.failureMock)
 
     // When
     let result = await useCase.fetchAstronomyPictures()
