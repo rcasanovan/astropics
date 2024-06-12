@@ -12,7 +12,7 @@ struct AstronomyPictureView: View {
           .frame(maxHeight: 140)
       } else {
         if let url = astronomyPicture.url {
-          AsyncImage(url: astronomyPicture.url) { phase in
+          AsyncImage(url: url) { phase in
             switch phase {
             case .success(let image):
               image

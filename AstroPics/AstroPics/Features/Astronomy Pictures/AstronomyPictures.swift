@@ -9,10 +9,9 @@ import ComposableArchitecture
 import Foundation
 
 public struct AstronomyPictures: Reducer {
-  //__ The basic state. Feel free to change this if needed.
   public struct State: Equatable {
     /// The current network state for the feature
-    var networkState: NetworkState<[AstronomyPicture], AstronomyPictures.Error>
+    public var networkState: NetworkState<[AstronomyPicture], AstronomyPictures.Error>
 
     public init(networkState: NetworkState<[AstronomyPicture], AstronomyPictures.Error>) {
       self.networkState = networkState

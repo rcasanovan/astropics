@@ -23,14 +23,7 @@ struct AstronomyPicturesView: View {
       case .loading:
         placeholder()
       case let .completed(.success(astronomyPictures)):
-        ScrollView {
-          VStack(spacing: 0) {
-            ForEach(astronomyPictures, id: \.self) { item in
-              AstronomyPictureView(astronomyPicture: item)
-              separator()
-            }
-          }
-        }
+        success(with: astronomyPictures)
       case let .completed(.failure(error)):
         EmptyView()
         Color.red
@@ -60,7 +53,7 @@ extension AstronomyPicturesView {
   }
 }
 
-// MARK: - Placeholder
+// MARK: - States & helpers
 
 extension AstronomyPicturesView {
   fileprivate func placeholder() -> some View {
@@ -84,6 +77,30 @@ extension AstronomyPicturesView {
       }
     }
     .disabled(true)
+  }
+
+  fileprivate func success(with astronomyPictures: [AstronomyPicture]) -> some View {
+    NavigationView {
+      ScrollView {
+        VStack(spacing: 0) {
+          ForEach(astronomyPictures, id: \.self) { item in
+            NavigationLink(
+              destination:
+                AstronomyPictureDetailView(
+                  store: .init(
+                    initialState: AstronomyPictureDetail.State(astronomyPicture: item)
+                  ) {
+                    AstronomyPictureDetail()
+                  }
+                )
+            ) {
+              AstronomyPictureView(astronomyPicture: item)
+            }
+            separator()
+          }
+        }
+      }
+    }
   }
 
   fileprivate func separator() -> some View {
