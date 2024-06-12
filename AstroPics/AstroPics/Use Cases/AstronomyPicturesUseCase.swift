@@ -36,7 +36,7 @@ public struct AstronomyPicturesUseCaseImpl: AstronomyPicturesUseCase {
             explanation: dataModel.explanation
           )
         }
-        return .success(pictures)
+        return .success(pictures.reversed())
       case .failure(let error):
         return .failure(error)
       }
