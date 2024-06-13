@@ -39,3 +39,12 @@ How to accomplish all of the above in a simple API with as few concepts and movi
 <p float="center">
   <img src="https://github.com/rcasanovan/astropics/blob/main/Images/TCA_image.001.jpeg"/>
 </p>
+
+## Snapshots
+<p float="left">
+  <img src="https://github.com/urbansportsgroup-challenges/ios-coding-challenge-rcasanovan/blob/main/Images/testLoadActivitiesViewLoadingState.light.png" width="250" />
+  <img src="https://github.com/urbansportsgroup-challenges/ios-coding-challenge-rcasanovan/blob/main/Images/testLoadActivitiesViewSuccessState.light.png" width="250" /> 
+  <img src="https://github.com/urbansportsgroup-challenges/ios-coding-challenge-rcasanovan/blob/main/Images/testLoadActivitiesViewFailureState.light.png" width="250" />
+  <img src="https://github.com/urbansportsgroup-challenges/ios-coding-challenge-rcasanovan/blob/main/Images/testLoadActivitiesViewSuccessStateWithNoGyms.light.png" width="250" />
+  <img src="https://github.com/urbansportsgroup-challenges/ios-coding-challenge-rcasanovan/blob/main/Images/testMatchView.light.png" width="250" /> 
+</p>
