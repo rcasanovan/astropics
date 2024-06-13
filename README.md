@@ -40,11 +40,15 @@ How to accomplish all of the above in a simple API with as few concepts and movi
   <img src="https://github.com/rcasanovan/astropics/blob/main/Images/TCA_image.001.jpeg"/>
 </p>
 
-## Snapshots
+## Snapshots - Astronomy Pictures view
 <p float="left">
   <img src="https://github.com/rcasanovan/astropics/blob/main/Images/Simulator%20Screenshot%20-%20iPhone%2015%20Pro%20-%202024-06-13%20at%2017.13.04.png" width="250" />
   <img src="https://github.com/rcasanovan/astropics/blob/main/Images/Simulator%20Screenshot%20-%20iPhone%2015%20Pro%20-%202024-06-13%20at%2017.13.10.png" width="250" /> 
+  <img src="https://github.com/rcasanovan/astropics/blob/main/Images/Simulator%20Screenshot%20-%20iPhone%2015%20Pro%20-%202024-06-13%20at%2017.22.35.png" width="250" /> 
+</p>
+
+## Snapshots - Astronomy Picture Detail view
+<p float="left">
   <img src="https://github.com/rcasanovan/astropics/blob/main/Images/Simulator%20Screenshot%20-%20iPhone%2015%20Pro%20-%202024-06-13%20at%2017.13.16.png" width="250" />
   <img src="https://github.com/rcasanovan/astropics/blob/main/Images/Simulator%20Screenshot%20-%20iPhone%2015%20Pro%20-%202024-06-13%20at%2017.14.34.png" width="250" />
-  <img src="https://github.com/rcasanovan/astropics/blob/main/Images/Simulator%20Screenshot%20-%20iPhone%2015%20Pro%20-%202024-06-13%20at%2017.22.35.png" width="250" /> 
 </p>
