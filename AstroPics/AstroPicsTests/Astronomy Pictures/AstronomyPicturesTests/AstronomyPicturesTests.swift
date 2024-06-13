@@ -29,8 +29,13 @@ final class AstronomyPicturesTests: XCTestCase {
 
     let astronomyPictures: [AstronomyPicture] =
       apiDataModelResponse.map {
-        AstronomyPicture(
-          id: $0.url.absoluteString,
+        let combinedID =
+          "\($0.url)\($0.date)\($0.title)\($0.explanation)"
+
+        let hashID = combinedID.hash
+
+        return AstronomyPicture(
+          id: String(hashID),
           date: Date.transformDateStringToCurrentLocale($0.date, locale: locale),
           title: $0.title,
           url: $0.url,
