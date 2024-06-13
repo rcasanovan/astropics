@@ -63,7 +63,7 @@ How to accomplish all of the above in a simple API with as few concepts and movi
 - As a user, when I tap on one item, I want to see a Detail page where it displays the image and the description.
 - set the minimum deployment target to iOS 15.
 - fetch data from a remote endpoint ([NASA](https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&start_date=YYYY-MM-DD&end_date=YYYY-MM-DD)).
-- cover the code with tests.
+- cover the code with tests (unit tests and snapshot tests).
 
 ## Additional tools / technologies
 * [Swift-format](https://github.com/apple/swift-format): swift-format provides the formatting technology for SourceKit-LSP and the building blocks for doing code formatting transformations.
