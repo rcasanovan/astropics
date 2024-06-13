@@ -21,6 +21,7 @@
 		92A8490A2C1B0AF00083D03B /* AstronomyPictureDetailViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A849092C1B0AF00083D03B /* AstronomyPictureDetailViewTests.swift */; };
 		92A8490C2C1B0D4C0083D03B /* Snapshotting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A8490B2C1B0D4C0083D03B /* Snapshotting.swift */; };
 		92A8490E2C1B0EC30083D03B /* astronomyPicture.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 92A8490D2C1B0EC30083D03B /* astronomyPicture.jpeg */; };
+		92A849112C1B163D0083D03B /* AstronomyPicturesSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A849102C1B163D0083D03B /* AstronomyPicturesSnapshotTests.swift */; };
 		92E31CB22C19B63C00948343 /* AstroPicsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E31CB12C19B63C00948343 /* AstroPicsApp.swift */; };
 		92E31CB62C19B63D00948343 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92E31CB52C19B63D00948343 /* Assets.xcassets */; };
 		92E31CBA2C19B63D00948343 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92E31CB92C19B63D00948343 /* Preview Assets.xcassets */; };
@@ -65,6 +66,7 @@
 		92A849092C1B0AF00083D03B /* AstronomyPictureDetailViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyPictureDetailViewTests.swift; sourceTree = "<group>"; };
 		92A8490B2C1B0D4C0083D03B /* Snapshotting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snapshotting.swift; sourceTree = "<group>"; };
 		92A8490D2C1B0EC30083D03B /* astronomyPicture.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = astronomyPicture.jpeg; sourceTree = "<group>"; };
+		92A849102C1B163D0083D03B /* AstronomyPicturesSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyPicturesSnapshotTests.swift; sourceTree = "<group>"; };
 		92E31CAE2C19B63C00948343 /* AstroPics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AstroPics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92E31CB12C19B63C00948343 /* AstroPicsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstroPicsApp.swift; sourceTree = "<group>"; };
 		92E31CB52C19B63D00948343 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 		92A848FD2C1B046B0083D03B /* Astronomy Pictures */ = {
 			isa = PBXGroup;
 			children = (
+				92A8490F2C1B162D0083D03B /* AstronomyPicturesSnapshotTests */,
 				92A849002C1B04CE0083D03B /* AstronomyPicturesTests */,
 			);
 			path = "Astronomy Pictures";
@@ -187,6 +190,14 @@
 				92A849092C1B0AF00083D03B /* AstronomyPictureDetailViewTests.swift */,
 			);
 			path = AstronomyPictureDetailSnapshotTests;
+			sourceTree = "<group>";
+		};
+		92A8490F2C1B162D0083D03B /* AstronomyPicturesSnapshotTests */ = {
+			isa = PBXGroup;
+			children = (
+				92A849102C1B163D0083D03B /* AstronomyPicturesSnapshotTests.swift */,
+			);
+			path = AstronomyPicturesSnapshotTests;
 			sourceTree = "<group>";
 		};
 		92E31CA52C19B63C00948343 = {
@@ -490,6 +501,7 @@
 				92A8490A2C1B0AF00083D03B /* AstronomyPictureDetailViewTests.swift in Sources */,
 				92E31CFB2C19BDE000948343 /* APIClientTests.swift in Sources */,
 				92E31D122C19D60C00948343 /* AstronomyPicturesUseCaseTests.swift in Sources */,
+				92A849112C1B163D0083D03B /* AstronomyPicturesSnapshotTests.swift in Sources */,
 				92A8490C2C1B0D4C0083D03B /* Snapshotting.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
