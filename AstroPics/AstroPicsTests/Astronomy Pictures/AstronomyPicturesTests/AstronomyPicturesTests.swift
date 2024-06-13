@@ -4,7 +4,7 @@ import XCTest
 
 @testable import AstroPics
 
-final class LoadActivitiesTests: XCTestCase {
+final class AstronomyPicturesTests: XCTestCase {
   @MainActor
   func testOnAppearDidReceiveAstronomyPictures() async {
     // Given

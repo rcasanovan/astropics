@@ -134,6 +134,15 @@ extension AstronomyPictureDetailView {
 
 // MARK: Previews
 
+struct AstronomyPictureDetailView_Preview {
+  struct Preview: View {
+    var store: Store<AstronomyPictureDetail.State, AstronomyPictureDetail.Action>
+    var body: some View {
+      AstronomyPictureDetailView(store: store)
+    }
+  }
+}
+
 /// Preview for AstronomyPicture item with image
 #Preview {
   let store: Store<AstronomyPictureDetail.State, AstronomyPictureDetail.Action> = .init(
