@@ -36,6 +36,7 @@ public struct AstronomyPictures: Reducer {
         return .none
 
       case .didTapOnRefresh:
+        state.networkState = .loading
         return self.loadEffect()
 
       case .onAppear:
