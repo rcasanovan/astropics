@@ -4,6 +4,7 @@ struct AstronomyPictureView: View {
   private let pictureGradient = Gradient(colors: [Color.black.opacity(0.0), Color.black.opacity(0.4)])
 
   let astronomyPicture: AstronomyPicture
+  let isLoadingImagesEnabled: Bool
 
   var body: some View {
     ZStack {
@@ -11,7 +12,7 @@ struct AstronomyPictureView: View {
         Color.black
           .frame(maxHeight: 140)
       } else {
-        if let url = astronomyPicture.url {
+        if let url = astronomyPicture.url, isLoadingImagesEnabled {
           AsyncImage(url: url) { phase in
             switch phase {
             case .success(let image):
@@ -91,7 +92,8 @@ struct AstronomyPictureView: View {
       hasVideoContent: false,
       explanation:
         "Can a rocket make the Moon ripple?."
-    )
+    ),
+    isLoadingImagesEnabled: false
   )
 }
 
@@ -106,7 +108,8 @@ struct AstronomyPictureView: View {
       hasVideoContent: false,
       explanation:
         "Can a rocket make the Moon ripple?."
-    )
+    ),
+    isLoadingImagesEnabled: false
   )
 }
 
@@ -121,7 +124,8 @@ struct AstronomyPictureView: View {
       hasVideoContent: true,
       explanation:
         "Can a rocket make the Moon ripple?."
-    )
+    ),
+    isLoadingImagesEnabled: false
   )
 }
 

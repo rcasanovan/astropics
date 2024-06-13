@@ -2,6 +2,8 @@ import ComposableArchitecture
 import SwiftUI
 
 struct AstronomyPicturesView: View {
+  @Environment(\.isLoadingImagesEnabled) private var isLoadingImagesEnabled
+
   private var store: Store<AstronomyPictures.State, AstronomyPictures.Action>
 
   public init(store: Store<AstronomyPictures.State, AstronomyPictures.Action>) {
@@ -72,7 +74,8 @@ extension AstronomyPicturesView {
                   url: nil,
                   hasVideoContent: false,
                   explanation: Placeholder.longText
-                )
+                ),
+              isLoadingImagesEnabled: isLoadingImagesEnabled
             )
             .redacted(reason: .placeholder)
 
@@ -106,7 +109,7 @@ extension AstronomyPicturesView {
                   }
                 )
               ) {
-                AstronomyPictureView(astronomyPicture: item)
+                AstronomyPictureView(astronomyPicture: item, isLoadingImagesEnabled: isLoadingImagesEnabled)
               }
               separator()
             }
@@ -132,12 +135,12 @@ extension AstronomyPicturesView {
 // MARK: Previews
 
 struct AstronomyPicturesView_Preview {
-    struct Preview: View {
-        var store: Store<AstronomyPictures.State, AstronomyPictures.Action>
-        var body: some View {
-            AstronomyPicturesView(store: store)
-        }
+  struct Preview: View {
+    var store: Store<AstronomyPictures.State, AstronomyPictures.Action>
+    var body: some View {
+      AstronomyPicturesView(store: store)
     }
+  }
 }
 
 #Preview {
