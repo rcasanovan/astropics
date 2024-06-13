@@ -27,8 +27,14 @@ public struct AstronomyPicturesUseCaseImpl: AstronomyPicturesUseCase {
       switch result {
       case .success(let dataModels):
         let pictures = dataModels.map { dataModel in
-          AstronomyPicture(
-            id: dataModel.url.absoluteString,
+          let combinedID =
+            "\(dataModel.url)\(dataModel.date)\(dataModel.title)\(dataModel.explanation)"
+
+          // Hash the combined string to produce a unique identifier
+          let hashID = combinedID.hash
+
+          return AstronomyPicture(
+            id: String(hashID),
             date: Date.transformDateStringToCurrentLocale(dataModel.date, locale: locale),
             title: dataModel.title,
             url: dataModel.url,
