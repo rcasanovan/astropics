@@ -57,7 +57,7 @@ How to accomplish all of the above in a simple API with as few concepts and movi
 - As a user, when I open the app, I want to see the List page where it displays a list of Astronomy Picture of the Day for the last 7 days. Each item consists of its image, title, and captured date.
 - As a user, when I tap on one item, I want to see a Detail page where it displays the image and the description.
 - set the minimum deployment target to iOS 15.
-- fetch data from a remote endpoint ([NASA](https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&start_date=YYYY-MM-DD&end_date=YYYY- MM-DD)).
+- fetch data from a remote endpoint ([NASA](https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&start_date=YYYY-MM-DD&end_date=YYYY-MM-DD)).
 - cover the code with tests.
 
 ## Additional tools / technologies
