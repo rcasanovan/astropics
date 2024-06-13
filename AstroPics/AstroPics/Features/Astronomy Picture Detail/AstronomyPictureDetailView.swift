@@ -2,6 +2,8 @@ import ComposableArchitecture
 import SwiftUI
 
 struct AstronomyPictureDetailView: View {
+  @Environment(\.isLoadingImagesEnabled) private var isLoadingImagesEnabled
+
   private let pictureGradient = Gradient(colors: [Color.black.opacity(0.0), Color.black.opacity(0.5)])
 
   private var store: Store<AstronomyPictureDetail.State, AstronomyPictureDetail.Action>
@@ -25,7 +27,7 @@ struct AstronomyPictureDetailView: View {
           Color.black
             .frame(maxWidth: .infinity, maxHeight: .infinity)
         } else {
-          if let url = viewStore.astronomyPicture.url {
+          if let url = viewStore.astronomyPicture.url, isLoadingImagesEnabled {
             GeometryReader { geometry in
               AsyncImage(url: url) { phase in
                 switch phase {
@@ -43,7 +45,6 @@ struct AstronomyPictureDetailView: View {
                   Color.white
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                 @unknown default:
-                  // Handle unknown state
                   EmptyView()
                 }
               }

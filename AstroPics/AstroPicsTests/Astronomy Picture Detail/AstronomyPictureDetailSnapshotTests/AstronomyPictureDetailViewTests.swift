@@ -27,9 +27,11 @@ final class AstronomyPictureDetailViewTests: XCTestCase {
       AstronomyPictureDetail()
     }
 
-    let view = AstronomyPictureDetailView_Preview.Preview(
-      store: store
-    )
+    let view =
+      AstronomyPictureDetailView_Preview.Preview(
+        store: store
+      )
+      .environment(\.isLoadingImagesEnabled, false)
 
     assertSnapshot(matching: view.colorScheme(.light), as: .deviceImage(), named: "light")
     assertSnapshot(matching: view.colorScheme(.dark), as: .deviceImage(), named: "dark")
@@ -52,9 +54,12 @@ final class AstronomyPictureDetailViewTests: XCTestCase {
       AstronomyPictureDetail()
     }
 
-    let view = AstronomyPictureDetailView_Preview.Preview(
-      store: store
-    )
+    let view =
+      AstronomyPictureDetailView_Preview.Preview(
+        store: store
+      )
+      .environment(\.isLoadingImagesEnabled, false)
+
     assertSnapshot(matching: view.colorScheme(.light), as: .deviceImage(), named: "light")
     assertSnapshot(matching: view.colorScheme(.dark), as: .deviceImage(), named: "dark")
   }

@@ -5,7 +5,7 @@ import XCTest
 
 @testable import AstroPics
 
-final class AstronomyPicturesSnapshotTests: XCTestCase {
+final class AstronomyPicturesViewTests: XCTestCase {
   override func setUpWithError() throws {
     //    isRecording = true
   }
