@@ -10,7 +10,7 @@ final class AstronomyPicturesSnapshotTests: XCTestCase {
     //    isRecording = true
   }
 
-  func testLoadActivitiesViewLoadingState() {
+  func testAstronomyPicturesViewLoadingState() {
       let locale = Locale(identifier: "en_US")
       let useCase = AstronomyPicturesUseCaseImpl(
         apiClient: APIClient.mock,
@@ -31,7 +31,7 @@ final class AstronomyPicturesSnapshotTests: XCTestCase {
     assertSnapshot(matching: view.colorScheme(.dark), as: .deviceImage(), named: "dark")
   }
 
-  func testLoadActivitiesViewSuccessState() {
+  func testAstronomyPicturesViewSuccessState() {
       let locale = Locale(identifier: "en_US")
       let useCase = AstronomyPicturesUseCaseImpl(
         apiClient: APIClient.mock,
@@ -52,7 +52,7 @@ final class AstronomyPicturesSnapshotTests: XCTestCase {
     assertSnapshot(matching: view.colorScheme(.dark), as: .deviceImage(), named: "dark")
   }
 
-  func testLoadActivitiesViewFailureState() {
+  func testAstronomyPicturesViewFailureState() {
       let locale = Locale(identifier: "en_US")
       let useCase = AstronomyPicturesUseCaseImpl(
         apiClient: APIClient.mock,
