@@ -22,16 +22,8 @@ struct HeaderView: View {
 
 // MARK: Previews
 
-struct HeaderView_Previews: PreviewProvider {
-  struct Preview: View {
-    var body: some View {
-      HeaderView()
-    }
-  }
-
-  static var previews: some View {
-    Preview()
-  }
+#Preview {
+  HeaderView()
 }
 
 #endif

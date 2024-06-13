@@ -11,10 +11,10 @@ public struct AstronomyPictures: Reducer {
     }
   }
 
-  //__ The basic actions. Feel free to change this if needed.
   public enum Action: Equatable {
     case didReceiveAstronomyPictures([AstronomyPicture])
     case didReceiveError(Error)
+    case didTapOnRefresh
     case onAppear
   }
 
@@ -34,6 +34,9 @@ public struct AstronomyPictures: Reducer {
       case .didReceiveError(let error):
         state.networkState = .completed(.failure(error))
         return .none
+
+      case .didTapOnRefresh:
+        return self.loadEffect()
 
       case .onAppear:
         guard case .ready = state.networkState else {

@@ -9,7 +9,6 @@ struct AstronomyPicturesView: View {
   }
 
   @ViewBuilder
-  //__ This content view
   private var content: some View {
     WithViewStore(store, observe: { $0 }) { viewStore in
       switch viewStore.networkState {
@@ -18,8 +17,16 @@ struct AstronomyPicturesView: View {
       case let .completed(.success(astronomyPictures)):
         success(with: astronomyPictures)
       case let .completed(.failure(error)):
-        EmptyView()
-        Color.red
+        VStack {
+          Spacer()
+          ErrorView(
+            error: error.localizedDescription,
+            didTapOnReload: {
+              viewStore.send(.didTapOnRefresh)
+            }
+          )
+          Spacer()
+        }
       case .ready:
         Color.clear
       }
@@ -140,7 +147,7 @@ extension AstronomyPicturesView {
 
 #Preview {
   let store: Store<AstronomyPictures.State, AstronomyPictures.Action> = .init(
-    initialState: .failure
+    initialState: .loading
   ) {
     AstronomyPictures(
       astronomyPicturesUseCase: AstronomyPicturesUseCaseImpl(
@@ -154,7 +161,7 @@ extension AstronomyPicturesView {
 
 #Preview {
   let store: Store<AstronomyPictures.State, AstronomyPictures.Action> = .init(
-    initialState: .loading
+    initialState: .failure
   ) {
     AstronomyPictures(
       astronomyPicturesUseCase: AstronomyPicturesUseCaseImpl(

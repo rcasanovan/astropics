@@ -3,12 +3,10 @@ import Foundation
 import SwiftUI
 
 public struct AstronomyPictureDetail: Reducer {
-  //__ The basic state. Feel free to change this if needed.
   public struct State: Equatable {
     public let astronomyPicture: AstronomyPicture
   }
 
-  //__ The basic actions. Feel free to change this if needed.
   public enum Action: Equatable {
     case didTapOnLoadContent
   }

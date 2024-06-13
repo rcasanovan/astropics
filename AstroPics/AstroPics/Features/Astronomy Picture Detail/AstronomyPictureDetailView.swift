@@ -4,8 +4,6 @@ import SwiftUI
 struct AstronomyPictureDetailView: View {
   private let pictureGradient = Gradient(colors: [Color.black.opacity(0.0), Color.black.opacity(0.5)])
 
-  @State private var scale: CGFloat = 1.0
-
   private var store: Store<AstronomyPictureDetail.State, AstronomyPictureDetail.Action>
 
   public init(store: Store<AstronomyPictureDetail.State, AstronomyPictureDetail.Action>) {
@@ -117,7 +115,6 @@ struct AstronomyPictureDetailView: View {
     }
   }
 
-  //__ This is the body for the view
   var body: some View {
     content
   }
@@ -137,6 +134,7 @@ extension AstronomyPictureDetailView {
 
 // MARK: Previews
 
+/// Preview for AstronomyPicture item with image
 #Preview {
   let store: Store<AstronomyPictureDetail.State, AstronomyPictureDetail.Action> = .init(
     initialState: AstronomyPictureDetail.State(
@@ -156,6 +154,7 @@ extension AstronomyPictureDetailView {
   return AstronomyPictureDetailView(store: store)
 }
 
+/// Preview for AstronomyPicture item with video
 #Preview {
   let store: Store<AstronomyPictureDetail.State, AstronomyPictureDetail.Action> = .init(
     initialState: AstronomyPictureDetail.State(
