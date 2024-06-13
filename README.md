@@ -42,7 +42,7 @@ How to accomplish all of the above in a simple API with as few concepts and movi
 
 ## Assumptions
 - Astronomy picture ID: In order to list all the astronomy pictures, we need to add an ID for each item. As the API is not retrieving an ID, I generated the ID for each tiem considering diferent fields (url, date, title an explanation).
-- Astronomy picture image: The API is rerieving two fields for the image (one for the full size format and another for a medium size format). It would be nice to explore if the API could retrieve a customizable URL (just like https://apod.nasa.gov/apod/image/2401/image_W_H.jpg). This way we could control the size for the image and load it according with the size we need for each case (e.g.: for the list in the main view).
+- Astronomy picture image: The API is rerieving two fields for the image (one for the full size format and another for a medium size format). It would be nice to explore if the API could retrieve a customizable URL (just like https://apod.nasa.gov/apod/image/2401/image_W_H.jpg). This way we could control the size for the image and load it according to the size we need for each case (e.g.: for the list in the main view).
 - Error view: I added an error view state just in case the API is retrieving an error for the call.
 - Videos and Images: I detected that the API is retrieving images and videos. I'm considering this and changing the UI for each case.
 
