@@ -22,6 +22,14 @@ struct HeaderView: View {
 
 // MARK: Previews
 
+struct HeaderView_Preview {
+  struct Preview: View {
+    var body: some View {
+      HeaderView()
+    }
+  }
+}
+
 #Preview {
   HeaderView()
 }

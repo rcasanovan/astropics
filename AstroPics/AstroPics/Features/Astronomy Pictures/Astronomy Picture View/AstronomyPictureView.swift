@@ -93,7 +93,7 @@ struct AstronomyPictureView: View {
       explanation:
         "Can a rocket make the Moon ripple?."
     ),
-    isLoadingImagesEnabled: false
+    isLoadingImagesEnabled: true
   )
 }
 
@@ -109,7 +109,7 @@ struct AstronomyPictureView: View {
       explanation:
         "Can a rocket make the Moon ripple?."
     ),
-    isLoadingImagesEnabled: false
+    isLoadingImagesEnabled: true
   )
 }
 
@@ -125,7 +125,7 @@ struct AstronomyPictureView: View {
       explanation:
         "Can a rocket make the Moon ripple?."
     ),
-    isLoadingImagesEnabled: false
+    isLoadingImagesEnabled: true
   )
 }
 
