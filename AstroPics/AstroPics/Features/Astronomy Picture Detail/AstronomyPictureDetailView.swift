@@ -38,9 +38,8 @@ struct AstronomyPictureDetailView: View {
                     .frame(width: geometry.size.width, height: geometry.size.height)
                     .clipped()
                 case .failure:
-                  Text("Failed to load image")
+                  Color.black
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .background(Color.white)
                 case .empty:
                   Color.white
                     .frame(maxWidth: .infinity, maxHeight: .infinity)

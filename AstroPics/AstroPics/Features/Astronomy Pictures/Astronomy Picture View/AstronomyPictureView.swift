@@ -53,13 +53,11 @@ struct AstronomyPictureView: View {
           if let date = astronomyPicture.date {
             HStack {
               Spacer()
-
               Text(date)
                 .foregroundColor(.white)
                 .font(.subheadline)
             }
           }
-
           Spacer()
 
           Text(astronomyPicture.title)
