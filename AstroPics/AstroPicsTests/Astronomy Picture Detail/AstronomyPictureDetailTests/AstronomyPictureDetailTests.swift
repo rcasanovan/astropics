@@ -4,8 +4,8 @@ import XCTest
 
 @testable import AstroPics
 
-@MainActor
 final class AstronomyPictureDetailTests: XCTestCase {
+  @MainActor
   func testDidTapOnLoadContentForImage() async {
     // Given
     let item = AstronomyPicture(
@@ -30,6 +30,7 @@ final class AstronomyPictureDetailTests: XCTestCase {
     await store.send(.didTapOnLoadContent)
   }
 
+  @MainActor
   func testDidTapOnLoadContentForVideo() async {
     // Given
     let item = AstronomyPicture(
