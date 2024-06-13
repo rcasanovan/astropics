@@ -35,7 +35,6 @@ struct AstronomyPicturesView: View {
     }
   }
 
-  //__ This is the body for the view
   var body: some View {
     WithViewStore(store, observe: { $0 }) { viewStore in
       content
