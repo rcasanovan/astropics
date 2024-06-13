@@ -40,6 +40,11 @@ How to accomplish all of the above in a simple API with as few concepts and movi
   <img src="https://github.com/rcasanovan/astropics/blob/main/Images/TCA_image.001.jpeg"/>
 </p>
 
+## Assumptions
+- Astronomy picture ID:
+- Astronomy picture image:
+- Date format:
+
 ## Snapshots - Astronomy Pictures view
 <p float="left">
   <img src="https://github.com/rcasanovan/astropics/blob/main/Images/Simulator%20Screenshot%20-%20iPhone%2015%20Pro%20-%202024-06-13%20at%2017.13.04.png" width="250" />
