@@ -37,5 +37,5 @@ How to accomplish all of the above in a simple API with as few concepts and movi
 
 ## Data flow
 <p float="center">
-  <img src="https://github.com/urbansportsgroup-challenges/ios-coding-challenge-rcasanovan/blob/main/Images/TCA_image.001.jpeg"/>
+  <img src="https://github.com/rcasanovan/astropics/blob/main/Images/TCA_image.001.jpeg"/>
 </p>
