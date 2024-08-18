@@ -7,8 +7,8 @@ class AstronomyPicturesUseCaseTests: XCTestCase {
   func testFetchAstronomyPicturesSuccess() async {
     // Given
     let useCase = AstronomyPicturesUseCaseImpl(
-        apiClient: APIClient.mock,
-        locale: Locale(identifier: "en_US")
+      apiClient: APIClient.mock,
+      locale: Locale(identifier: "en_US")
     )
 
     // When
@@ -26,8 +26,8 @@ class AstronomyPicturesUseCaseTests: XCTestCase {
   func testFetchAstronomyPicturesFailure() async {
     // Given
     let useCase = AstronomyPicturesUseCaseImpl(
-        apiClient: APIClient.failureMock,
-        locale: Locale(identifier: "en_US")
+      apiClient: APIClient.failureMock,
+      locale: Locale(identifier: "en_US")
     )
 
     // When
@@ -38,7 +38,10 @@ class AstronomyPicturesUseCaseTests: XCTestCase {
     case .success:
       XCTFail("Expected failure but got success")
     case .failure(let error):
-      XCTAssertEqual(error, .serverError(code: 999))
+      XCTAssertEqual(
+        error,
+        .cannotLoadPictures(error: "The operation couldn’t be completed. (AstroPics.APIError error 0.)")
+      )
     }
   }
 }

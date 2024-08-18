@@ -9,15 +9,22 @@ public struct AstronomyPicture: Equatable, Identifiable, Hashable {
   let explanation: String
 }
 
+// MARK: Errors
+extension AstronomyPicture {
+  public enum Error: Swift.Error, Equatable {
+    case cannotLoadPictures(error: String)
+  }
+}
+
 public protocol AstronomyPicturesUseCase {
-  func fetchAstronomyPictures() async -> Result<[AstronomyPicture], APIError>
+  func fetchAstronomyPictures() async -> Result<[AstronomyPicture], AstronomyPicture.Error>
 }
 
 public struct AstronomyPicturesUseCaseImpl: AstronomyPicturesUseCase {
   let apiClient: APIClientProtocol
   let locale: Locale
 
-  public func fetchAstronomyPictures() async -> Result<[AstronomyPicture], APIError> {
+  public func fetchAstronomyPictures() async -> Result<[AstronomyPicture], AstronomyPicture.Error> {
     do {
       let result = await apiClient.getAstronomyPictures(
         startDate: Date.formattedDateDaysAgo(7),
@@ -44,7 +51,7 @@ public struct AstronomyPicturesUseCaseImpl: AstronomyPicturesUseCase {
         }
         return .success(pictures.reversed())
       case .failure(let error):
-        return .failure(error)
+        return .failure(.cannotLoadPictures(error: error.localizedDescription))
       }
     }
   }

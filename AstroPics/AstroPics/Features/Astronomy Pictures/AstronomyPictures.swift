@@ -4,16 +4,16 @@ import Foundation
 public struct AstronomyPictures: Reducer {
   public struct State: Equatable {
     /// The current network state for the feature
-    public var networkState: NetworkState<[AstronomyPicture], AstronomyPictures.Error>
+    public var networkState: NetworkState<[AstronomyPicture], AstronomyPicture.Error>
 
-    public init(networkState: NetworkState<[AstronomyPicture], AstronomyPictures.Error>) {
+    public init(networkState: NetworkState<[AstronomyPicture], AstronomyPicture.Error>) {
       self.networkState = networkState
     }
   }
 
   public enum Action: Equatable {
     case didReceiveAstronomyPictures([AstronomyPicture])
-    case didReceiveError(Error)
+    case didReceiveError(AstronomyPicture.Error)
     case didTapOnRefresh
     case onAppear
   }
@@ -59,18 +59,10 @@ extension AstronomyPictures {
       case .success(let astronomyPictures):
         return await send(.didReceiveAstronomyPictures(astronomyPictures))
       case .failure(let error):
-        return await send(.didReceiveError(.cannotLoadPictures(error: error.localizedDescription)))
+        return await send(.didReceiveError(error))
       }
     } catch: { error, send in
       return await send(.didReceiveError(.cannotLoadPictures(error: error.localizedDescription)))
     }
-  }
-}
-
-// MARK: Errors
-
-extension AstronomyPictures {
-  public enum Error: Swift.Error, Equatable {
-    case cannotLoadPictures(error: String)
   }
 }
