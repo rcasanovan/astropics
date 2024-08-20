@@ -60,6 +60,8 @@
 		92E31D0A2C19CDEF00948343 /* AstronomyPicturesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E31D082C19CDEF00948343 /* AstronomyPicturesView.swift */; };
 		92E31D0B2C19CDEF00948343 /* AstronomyPictures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E31D092C19CDEF00948343 /* AstronomyPictures.swift */; };
 		92E31D122C19D60C00948343 /* AstronomyPicturesUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E31D112C19D60C00948343 /* AstronomyPicturesUseCaseTests.swift */; };
+		92E37C8B2C7539C60047293A /* testAstronomyPicturesViewRefreshingState.light.png in Resources */ = {isa = PBXBuildFile; fileRef = 92E37C892C7539C60047293A /* testAstronomyPicturesViewRefreshingState.light.png */; };
+		92E37C8C2C7539C60047293A /* testAstronomyPicturesViewRefreshingState.dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 92E37C8A2C7539C60047293A /* testAstronomyPicturesViewRefreshingState.dark.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +129,8 @@
 		92E31D082C19CDEF00948343 /* AstronomyPicturesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyPicturesView.swift; sourceTree = "<group>"; };
 		92E31D092C19CDEF00948343 /* AstronomyPictures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyPictures.swift; sourceTree = "<group>"; };
 		92E31D112C19D60C00948343 /* AstronomyPicturesUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyPicturesUseCaseTests.swift; sourceTree = "<group>"; };
+		92E37C892C7539C60047293A /* testAstronomyPicturesViewRefreshingState.light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testAstronomyPicturesViewRefreshingState.light.png; sourceTree = "<group>"; };
+		92E37C8A2C7539C60047293A /* testAstronomyPicturesViewRefreshingState.dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testAstronomyPicturesViewRefreshingState.dark.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -259,6 +263,8 @@
 				92A8491A2C1B41760083D03B /* testAstronomyPicturesViewFailureState.light.png */,
 				92A8491B2C1B41760083D03B /* testAstronomyPicturesViewLoadingState.dark.png */,
 				92A8491C2C1B41760083D03B /* testAstronomyPicturesViewLoadingState.light.png */,
+				92E37C8A2C7539C60047293A /* testAstronomyPicturesViewRefreshingState.dark.png */,
+				92E37C892C7539C60047293A /* testAstronomyPicturesViewRefreshingState.light.png */,
 				92A8491D2C1B41760083D03B /* testAstronomyPicturesViewSuccessState.dark.png */,
 				92A8491E2C1B41760083D03B /* testAstronomyPicturesViewSuccessState.light.png */,
 			);
@@ -578,12 +584,14 @@
 				92A849322C1B41760083D03B /* testAstronomyPictureViewWithDate.light.png in Resources */,
 				92A8492D2C1B41760083D03B /* testAstronomyPicturesViewLoadingState.dark.png in Resources */,
 				92A8492E2C1B41760083D03B /* testAstronomyPicturesViewLoadingState.light.png in Resources */,
+				92E37C8C2C7539C60047293A /* testAstronomyPicturesViewRefreshingState.dark.png in Resources */,
 				92A849372C1B41760083D03B /* testHeaderView.dark.png in Resources */,
 				92A8493F2C1B41890083D03B /* testAstronomyPictureDetailViewWithImage.dark.png in Resources */,
 				92A849342C1B41760083D03B /* testAstronomyPictureViewWithoutDate.light.png in Resources */,
 				92A849422C1B41890083D03B /* testAstronomyPictureDetailViewWithVideo.light.png in Resources */,
 				92A849332C1B41760083D03B /* testAstronomyPictureViewWithoutDate.dark.png in Resources */,
 				92A849352C1B41760083D03B /* testAstronomyPictureViewWithVideo.dark.png in Resources */,
+				92E37C8B2C7539C60047293A /* testAstronomyPicturesViewRefreshingState.light.png in Resources */,
 				92A849362C1B41760083D03B /* testAstronomyPictureViewWithVideo.light.png in Resources */,
 				92A8492B2C1B41760083D03B /* testAstronomyPicturesViewFailureState.dark.png in Resources */,
 				92A8492F2C1B41760083D03B /* testAstronomyPicturesViewSuccessState.dark.png in Resources */,

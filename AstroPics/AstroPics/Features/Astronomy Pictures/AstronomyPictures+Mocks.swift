@@ -9,6 +9,8 @@ extension AstronomyPictures.State {
   static let success = Self(networkState: .completed(.success(.mock)))
 
   static let failure = Self(networkState: .completed(.failure(.cannotLoadPictures(error: "error"))))
+
+  static let refreshing = Self(networkState: .completed(.success(.mock)), isRefreshing: true)
 }
 
 extension Array where Element == AstronomyPicture {

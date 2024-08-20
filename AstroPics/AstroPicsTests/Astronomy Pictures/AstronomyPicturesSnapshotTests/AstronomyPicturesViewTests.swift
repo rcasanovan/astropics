@@ -73,4 +73,26 @@ final class AstronomyPicturesViewTests: XCTestCase {
     assertSnapshot(matching: view.colorScheme(.light), as: .deviceImage(), named: "light")
     assertSnapshot(matching: view.colorScheme(.dark), as: .deviceImage(), named: "dark")
   }
+
+  func testAstronomyPicturesViewRefreshingState() {
+    let locale = Locale(identifier: "en_US")
+    let useCase = AstronomyPicturesUseCaseImpl(
+      apiClient: APIClient.mock,
+      locale: locale
+    )
+    let store = Store<AstronomyPictures.State, AstronomyPictures.Action>(
+      initialState: .refreshing
+    ) {
+      AstronomyPictures(astronomyPicturesUseCase: useCase)
+    }
+
+    let view =
+      AstronomyPicturesView_Preview.Preview(
+        store: store
+      )
+      .environment(\.isLoadingImagesEnabled, false)
+
+    assertSnapshot(matching: view.colorScheme(.light), as: .deviceImage(), named: "light")
+    assertSnapshot(matching: view.colorScheme(.dark), as: .deviceImage(), named: "dark")
+  }
 }

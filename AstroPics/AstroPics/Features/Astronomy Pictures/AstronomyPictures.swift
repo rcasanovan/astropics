@@ -7,7 +7,11 @@ public struct AstronomyPictures: Reducer {
     /// The current network state for the feature
     public var networkState: NetworkState<[AstronomyPicture], AstronomyPicture.Error>
 
-    public init(networkState: NetworkState<[AstronomyPicture], AstronomyPicture.Error>) {
+    public init(
+      networkState: NetworkState<[AstronomyPicture], AstronomyPicture.Error>,
+      isRefreshing: Bool = false
+    ) {
+      self.isRefreshing = isRefreshing
       self.networkState = networkState
     }
   }
