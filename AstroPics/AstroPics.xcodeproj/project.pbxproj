@@ -219,7 +219,6 @@
 		92A849002C1B04CE0083D03B /* AstronomyPicturesTests */ = {
 			isa = PBXGroup;
 			children = (
-				92A8493E2C1B41890083D03B /* __Snapshots__ */,
 				92A849032C1B07060083D03B /* AstronomyPicturesTests.swift */,
 			);
 			path = AstronomyPicturesTests;
@@ -228,6 +227,7 @@
 		92A849082C1B0AC90083D03B /* AstronomyPictureDetailSnapshotTests */ = {
 			isa = PBXGroup;
 			children = (
+				92A8493E2C1B41890083D03B /* __Snapshots__ */,
 				92A849092C1B0AF00083D03B /* AstronomyPictureDetailViewTests.swift */,
 			);
 			path = AstronomyPictureDetailSnapshotTests;
