@@ -91,34 +91,48 @@ extension AstronomyPicturesView {
   }
 
   fileprivate func success(with astronomyPictures: [AstronomyPicture]) -> some View {
-    NavigationView {
-      ZStack(alignment: .top) {
-        // Scrollable content
-        ScrollView {
-          VStack(spacing: 0) {
-            Spacer().frame(height: 75)
+    WithViewStore(store, observe: { $0 }) { viewStore in
+      NavigationView {
+        ZStack(alignment: .top) {
+          // Scrollable content
+          ScrollView {
+            VStack(spacing: 0) {
+              Spacer().frame(height: 75)
 
-            ForEach(astronomyPictures, id: \.self) { item in
-              NavigationLink(
-                destination: AstronomyPictureDetailView(
-                  store: .init(
-                    initialState: AstronomyPictureDetail.State(astronomyPicture: item)
-                  ) {
-                    AstronomyPictureDetail()
-                  }
-                )
-              ) {
-                AstronomyPictureView(astronomyPicture: item, isLoadingImagesEnabled: isLoadingImagesEnabled)
+              if viewStore.isRefreshing {
+                ProgressView()
+                  .tint(.white)
+                  .scaleEffect(1.5)
+                  .padding()
               }
-              separator()
+
+              ForEach(astronomyPictures, id: \.self) { item in
+                NavigationLink(
+                  destination: AstronomyPictureDetailView(
+                    store: .init(
+                      initialState: AstronomyPictureDetail.State(astronomyPicture: item)
+                    ) {
+                      AstronomyPictureDetail()
+                    }
+                  )
+                ) {
+                  AstronomyPictureView(astronomyPicture: item, isLoadingImagesEnabled: isLoadingImagesEnabled)
+                }
+                separator()
+              }
             }
           }
+          .refreshable {
+            DispatchQueue.main.async {
+              viewStore.send(.didReload)
+            }
+          }
+          // Sticky Header
+          HeaderView()
+            .background(.black)
         }
-        // Sticky Header
-        HeaderView()
-          .background(.black)
+        .background(.black)
       }
-      .background(.black)
     }
   }
 

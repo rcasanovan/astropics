@@ -3,6 +3,7 @@ import Foundation
 
 public struct AstronomyPictures: Reducer {
   public struct State: Equatable {
+    public var isRefreshing = false
     /// The current network state for the feature
     public var networkState: NetworkState<[AstronomyPicture], AstronomyPicture.Error>
 
@@ -14,6 +15,7 @@ public struct AstronomyPictures: Reducer {
   public enum Action: Equatable {
     case didReceiveAstronomyPictures([AstronomyPicture])
     case didReceiveError(AstronomyPicture.Error)
+    case didReload
     case didTapOnRefresh
     case onAppear
   }
@@ -28,12 +30,18 @@ public struct AstronomyPictures: Reducer {
     Reduce { state, action in
       switch action {
       case .didReceiveAstronomyPictures(let astronomycPictures):
+        state.isRefreshing = false
         state.networkState = .completed(.success(astronomycPictures))
         return .none
 
       case .didReceiveError(let error):
+        state.isRefreshing = false
         state.networkState = .completed(.failure(error))
         return .none
+
+      case .didReload:
+        state.isRefreshing = true
+        return self.loadEffect()
 
       case .didTapOnRefresh:
         state.networkState = .loading
