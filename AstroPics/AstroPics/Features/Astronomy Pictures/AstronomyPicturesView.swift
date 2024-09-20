@@ -45,6 +45,25 @@ struct AstronomyPicturesView: View {
   }
 }
 
+// MARK: - Factory
+
+extension AstronomyPicturesView {
+  static func make() -> Self {
+    AstronomyPicturesView(
+      store: .init(
+        initialState: .init(networkState: .ready)
+      ) {
+        AstronomyPictures(
+          astronomyPicturesUseCase: AstronomyPicturesUseCaseImpl(
+            apiClient: APIClient.live,
+            locale: Locale.current
+          )
+        )
+      }
+    )
+  }
+}
+
 // MARK: - Constants
 
 extension AstronomyPicturesView {
@@ -108,13 +127,7 @@ extension AstronomyPicturesView {
 
               ForEach(astronomyPictures, id: \.self) { item in
                 NavigationLink(
-                  destination: AstronomyPictureDetailView(
-                    store: .init(
-                      initialState: AstronomyPictureDetail.State(astronomyPicture: item)
-                    ) {
-                      AstronomyPictureDetail()
-                    }
-                  )
+                  destination: AstronomyPictureDetailView.make(astronomyPicture: item)
                 ) {
                   AstronomyPictureView(astronomyPicture: item, isLoadingImagesEnabled: isLoadingImagesEnabled)
                 }

@@ -120,6 +120,20 @@ struct AstronomyPictureDetailView: View {
   }
 }
 
+// MARK: - Factory
+
+extension AstronomyPictureDetailView {
+  static func make(astronomyPicture: AstronomyPicture) -> Self {
+    AstronomyPictureDetailView(
+      store: .init(
+        initialState: AstronomyPictureDetail.State(astronomyPicture: astronomyPicture)
+      ) {
+        AstronomyPictureDetail()
+      }
+    )
+  }
+}
+
 // MARK: - Helpers
 
 extension AstronomyPictureDetailView {
