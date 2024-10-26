@@ -13,7 +13,7 @@ final class APIClientTests: XCTestCase {
     // Then
     switch result {
     case .success(let pictures):
-      XCTAssertFalse(pictures.isEmpty, "Gyms list should not be empty")
+      XCTAssertFalse(pictures.isEmpty, "List should not be empty")
     case .failure(let error):
       XCTFail("Expected success, but got failure with error: \(error)")
     }

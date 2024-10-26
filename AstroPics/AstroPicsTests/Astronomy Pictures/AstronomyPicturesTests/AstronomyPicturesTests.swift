@@ -28,9 +28,10 @@ final class AstronomyPicturesTests: XCTestCase {
     let apiDataModelResponse: [AstronomyPictureDataModel] = .mock
 
     let astronomyPictures: [AstronomyPicture] =
-      apiDataModelResponse.map {
+      apiDataModelResponse.filter { $0.media_type != .other }
+      .map {
         let combinedID =
-          "\($0.url)\($0.date)\($0.title)\($0.explanation)"
+          "\($0.date)\($0.title)\($0.explanation)"
 
         let hashID = combinedID.hash
 

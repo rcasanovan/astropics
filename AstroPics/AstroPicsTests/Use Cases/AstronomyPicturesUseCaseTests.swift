@@ -17,7 +17,7 @@ class AstronomyPicturesUseCaseTests: XCTestCase {
     // Then
     switch result {
     case .success(let pictures):
-      XCTAssertEqual(pictures.count, 7)
+      XCTAssertEqual(pictures.count, 6)
     case .failure:
       XCTFail("Expected success but got failure")
     }
