@@ -4,44 +4,40 @@ import SwiftUI
 struct AstronomyPicturesView: View {
   @Environment(\.isLoadingImagesEnabled) private var isLoadingImagesEnabled
 
-  private var store: Store<AstronomyPictures.State, AstronomyPictures.Action>
+  private var store: StoreOf<AstronomyPictures>
 
-  public init(store: Store<AstronomyPictures.State, AstronomyPictures.Action>) {
+  public init(store: StoreOf<AstronomyPictures>) {
     self.store = store
   }
 
   @ViewBuilder
   private var content: some View {
-    WithViewStore(store, observe: { $0 }) { viewStore in
-      switch viewStore.networkState {
-      case .loading:
-        placeholder()
-      case let .completed(.success(astronomyPictures)):
-        success(with: astronomyPictures)
-      case let .completed(.failure(error)):
-        VStack {
-          Spacer()
-          ErrorView(
-            error: error.localizedDescription,
-            didTapOnReload: {
-              viewStore.send(.didTapOnRefresh)
-            }
-          )
-          Spacer()
-        }
-      case .ready:
-        Color.clear
+    switch store.networkState {
+    case .loading:
+      placeholder()
+    case let .completed(.success(astronomyPictures)):
+      success(with: astronomyPictures)
+    case let .completed(.failure(error)):
+      VStack {
+        Spacer()
+        ErrorView(
+          error: error.localizedDescription,
+          didTapOnReload: {
+            store.send(.didTapOnRefresh)
+          }
+        )
+        Spacer()
       }
+    case .ready:
+      Color.clear
     }
   }
 
   var body: some View {
-    WithViewStore(store, observe: { $0 }) { viewStore in
-      content
-        .onAppear {
-          store.send(.onAppear)
-        }
-    }
+    content
+      .onAppear {
+        store.send(.onAppear)
+      }
   }
 }
 

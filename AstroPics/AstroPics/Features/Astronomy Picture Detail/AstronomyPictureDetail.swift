@@ -2,7 +2,9 @@ import ComposableArchitecture
 import Foundation
 import SwiftUI
 
-public struct AstronomyPictureDetail: Reducer {
+@Reducer
+public struct AstronomyPictureDetail {
+  @ObservableState
   public struct State: Equatable {
     public let astronomyPicture: AstronomyPicture
   }

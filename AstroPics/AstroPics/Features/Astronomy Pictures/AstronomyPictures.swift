@@ -1,7 +1,9 @@
 import ComposableArchitecture
 import Foundation
 
-public struct AstronomyPictures: Reducer {
+@Reducer
+public struct AstronomyPictures {
+  @ObservableState
   public struct State: Equatable {
     public var isRefreshing = false
     /// The current network state for the feature

@@ -6,7 +6,7 @@ struct AstronomyPictureDetailView: View {
 
   private let pictureGradient = Gradient(colors: [Color.black.opacity(0.0), Color.black.opacity(0.5)])
 
-  private var store: Store<AstronomyPictureDetail.State, AstronomyPictureDetail.Action>
+  private var store: StoreOf<AstronomyPictureDetail>
 
   public init(store: Store<AstronomyPictureDetail.State, AstronomyPictureDetail.Action>) {
     self.store = store
@@ -21,94 +21,92 @@ struct AstronomyPictureDetailView: View {
 
   @ViewBuilder
   private var content: some View {
-    WithViewStore(store, observe: { $0 }) { viewStore in
-      ZStack {
-        if viewStore.astronomyPicture.hasVideoContent {
-          Color.black
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-        } else {
-          if let url = viewStore.astronomyPicture.url, isLoadingImagesEnabled {
-            GeometryReader { geometry in
-              AsyncImage(url: url) { phase in
-                switch phase {
-                case .success(let image):
-                  image
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: geometry.size.width, height: geometry.size.height)
-                    .clipped()
-                case .failure:
-                  Color.black
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                case .empty:
-                  Color.white
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                @unknown default:
-                  EmptyView()
-                }
-              }
-            }
-          } else {
-            Color.gray
-              .frame(maxWidth: .infinity, maxHeight: .infinity)
-          }
-        }
-
-        if viewStore.astronomyPicture.url != nil {
-          LinearGradient(
-            gradient: pictureGradient,
-            startPoint: .top,
-            endPoint: .bottom
-          )
+    ZStack {
+      if store.astronomyPicture.hasVideoContent {
+        Color.black
           .frame(maxWidth: .infinity, maxHeight: .infinity)
-        }
-
-        VStack(alignment: .leading, spacing: 8) {
-          Spacer()
-
-          if viewStore.astronomyPicture.hasVideoContent {
-            VStack {
-              Spacer()
-              HStack {
-                Spacer()
-                Button(
-                  action: {
-                    store.send(.didTapOnLoadContent)
-                  },
-                  label: {
-                    Image("PlayIcon")
-                      .resizable()
-                      .frame(width: 70, height: 70)
-                      .foregroundColor(.white)
-                  }
-                )
-                Spacer()
+      } else {
+        if let url = store.astronomyPicture.url, isLoadingImagesEnabled {
+          GeometryReader { geometry in
+            AsyncImage(url: url) { phase in
+              switch phase {
+              case .success(let image):
+                image
+                  .resizable()
+                  .aspectRatio(contentMode: .fill)
+                  .frame(width: geometry.size.width, height: geometry.size.height)
+                  .clipped()
+              case .failure:
+                Color.black
+                  .frame(maxWidth: .infinity, maxHeight: .infinity)
+              case .empty:
+                Color.white
+                  .frame(maxWidth: .infinity, maxHeight: .infinity)
+              @unknown default:
+                EmptyView()
               }
-              Spacer()
             }
           }
-
-          separator()
-
-          Text(viewStore.astronomyPicture.explanation)
-            .foregroundColor(.white)
-            .font(.footnote)
-            .padding(.horizontal, 24)
-
-          separator()
+        } else {
+          Color.gray
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
-        .padding(.bottom, 64)
       }
-      .background(.black)
-      .toolbar {
-        ToolbarItem(placement: .navigationBarTrailing) {
-          if !viewStore.astronomyPicture.hasVideoContent {
-            Button(action: {
-              store.send(.didTapOnLoadContent)
-            }) {
-              Image("FullScreenIcon")
-                .foregroundColor(.white)
+
+      if store.astronomyPicture.url != nil {
+        LinearGradient(
+          gradient: pictureGradient,
+          startPoint: .top,
+          endPoint: .bottom
+        )
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+      }
+
+      VStack(alignment: .leading, spacing: 8) {
+        Spacer()
+
+        if store.astronomyPicture.hasVideoContent {
+          VStack {
+            Spacer()
+            HStack {
+              Spacer()
+              Button(
+                action: {
+                  store.send(.didTapOnLoadContent)
+                },
+                label: {
+                  Image("PlayIcon")
+                    .resizable()
+                    .frame(width: 70, height: 70)
+                    .foregroundColor(.white)
+                }
+              )
+              Spacer()
             }
+            Spacer()
+          }
+        }
+
+        separator()
+
+        Text(store.astronomyPicture.explanation)
+          .foregroundColor(.white)
+          .font(.footnote)
+          .padding(.horizontal, 24)
+
+        separator()
+      }
+      .padding(.bottom, 64)
+    }
+    .background(.black)
+    .toolbar {
+      ToolbarItem(placement: .navigationBarTrailing) {
+        if !store.astronomyPicture.hasVideoContent {
+          Button(action: {
+            store.send(.didTapOnLoadContent)
+          }) {
+            Image("FullScreenIcon")
+              .foregroundColor(.white)
           }
         }
       }
