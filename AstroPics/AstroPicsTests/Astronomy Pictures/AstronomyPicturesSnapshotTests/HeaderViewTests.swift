@@ -1,18 +1,23 @@
 import SnapshotTesting
 import SwiftUI
-import XCTest
+import Testing
 
 @testable import AstroPics
 
-final class HeaderViewTests: XCTestCase {
-  override func setUpWithError() throws {
-    //    isRecording = true
+struct HeaderViewTests {
+  var record: SnapshotTestingConfiguration.Record
+
+  init() {
+    record = .never
   }
 
+  @Test @MainActor
   func testHeaderView() {
     let view = HeaderView_Preview.Preview()
 
-    assertSnapshot(matching: view.colorScheme(.light), as: .deviceImage(), named: "light")
-    assertSnapshot(matching: view.colorScheme(.dark), as: .deviceImage(), named: "dark")
+    withSnapshotTesting(record: record) {
+      assertSnapshot(of: view.colorScheme(.light), as: .deviceImage(), named: "light")
+      assertSnapshot(of: view.colorScheme(.dark), as: .deviceImage(), named: "dark")
+    }
   }
 }

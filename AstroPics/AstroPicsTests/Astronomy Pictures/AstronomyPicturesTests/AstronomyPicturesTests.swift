@@ -1,11 +1,11 @@
 import ComposableArchitecture
 import SwiftUI
-import XCTest
+import Testing
 
 @testable import AstroPics
 
-final class AstronomyPicturesTests: XCTestCase {
-  @MainActor
+struct AstronomyPicturesTests {
+  @Test @MainActor
   func testOnAppearDidReceiveAstronomyPictures() async {
     // Given
     let locale = Locale(identifier: "en_US")
@@ -52,7 +52,7 @@ final class AstronomyPicturesTests: XCTestCase {
     }
   }
 
-  @MainActor
+  @Test @MainActor
   func testOnAppearDidReceiveError() async {
     // Given
     let locale = Locale(identifier: "en_US")

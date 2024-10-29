@@ -1,8 +1,9 @@
-import XCTest
+import Testing
 
 @testable import AstroPics
 
-final class APIClientTests: XCTestCase {
+struct APIClientTests {
+  @Test
   func testAPIClientGetAstronomyPicturesSuccess() async {
     // Given
     let apiClient = APIClient.mock
@@ -13,12 +14,13 @@ final class APIClientTests: XCTestCase {
     // Then
     switch result {
     case .success(let pictures):
-      XCTAssertFalse(pictures.isEmpty, "List should not be empty")
+      #expect(!pictures.isEmpty, "List should not be empty")
     case .failure(let error):
-      XCTFail("Expected success, but got failure with error: \(error)")
+      #expect(Bool(false), "Expected success, but got failure with error: \(error)")
     }
   }
 
+  @Test
   func testAPIClientGetAstronomyPicturesFailure() async {
     // Given
     let apiClient = APIClient.failureMock
@@ -29,9 +31,9 @@ final class APIClientTests: XCTestCase {
     // Then
     switch result {
     case .success:
-      XCTFail("Expected failure, but got success")
+      #expect(Bool(false), "Expected failure, but got success")
     case .failure(let error):
-      XCTAssertEqual(error, .serverError(code: 999), "Expected server error with specific code")
+      #expect(error == .serverError(code: 999), "Expected server error with specific code")
     }
   }
 }

@@ -1,11 +1,11 @@
 import ComposableArchitecture
 import SwiftUI
-import XCTest
+import Testing
 
 @testable import AstroPics
 
-final class AstronomyPictureDetailTests: XCTestCase {
-  @MainActor
+struct AstronomyPictureDetailTests {
+  @Test @MainActor
   func testDidTapOnLoadContentForImage() async {
     // Given
     let item = AstronomyPicture(
@@ -30,7 +30,7 @@ final class AstronomyPictureDetailTests: XCTestCase {
     await store.send(.didTapOnLoadContent)
   }
 
-  @MainActor
+  @Test @MainActor
   func testDidTapOnLoadContentForVideo() async {
     // Given
     let item = AstronomyPicture(

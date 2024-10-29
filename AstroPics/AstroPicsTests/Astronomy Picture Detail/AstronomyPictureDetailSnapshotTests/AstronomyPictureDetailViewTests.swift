@@ -1,15 +1,18 @@
 import ComposableArchitecture
 import SnapshotTesting
 import SwiftUI
-import XCTest
+import Testing
 
 @testable import AstroPics
 
-final class AstronomyPictureDetailViewTests: XCTestCase {
-  override func setUpWithError() throws {
-    //    isRecording = true
+struct AstronomyPictureDetailViewTests {
+  var record: SnapshotTestingConfiguration.Record
+
+  init() {
+    record = .never
   }
 
+  @Test @MainActor
   func testAstronomyPictureDetailViewWithImage() {
     let astronomyPicture = AstronomyPicture(
       id: "_id_0_",
@@ -33,10 +36,13 @@ final class AstronomyPictureDetailViewTests: XCTestCase {
       )
       .environment(\.isLoadingImagesEnabled, false)
 
-    assertSnapshot(matching: view.colorScheme(.light), as: .deviceImage(), named: "light")
-    assertSnapshot(matching: view.colorScheme(.dark), as: .deviceImage(), named: "dark")
+    withSnapshotTesting(record: record) {
+      assertSnapshot(of: view.colorScheme(.light), as: .deviceImage(), named: "light")
+      assertSnapshot(of: view.colorScheme(.dark), as: .deviceImage(), named: "dark")
+    }
   }
 
+  @Test @MainActor
   func testAstronomyPictureDetailViewWithVideo() {
     let astronomyPicture = AstronomyPicture(
       id: "_id_0_",
@@ -60,7 +66,9 @@ final class AstronomyPictureDetailViewTests: XCTestCase {
       )
       .environment(\.isLoadingImagesEnabled, false)
 
-    assertSnapshot(matching: view.colorScheme(.light), as: .deviceImage(), named: "light")
-    assertSnapshot(matching: view.colorScheme(.dark), as: .deviceImage(), named: "dark")
+    withSnapshotTesting(record: record) {
+      assertSnapshot(of: view.colorScheme(.light), as: .deviceImage(), named: "light")
+      assertSnapshot(of: view.colorScheme(.dark), as: .deviceImage(), named: "dark")
+    }
   }
 }

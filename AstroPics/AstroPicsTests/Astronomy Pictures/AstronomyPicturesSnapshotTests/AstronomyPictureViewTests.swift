@@ -1,14 +1,17 @@
 import SnapshotTesting
 import SwiftUI
-import XCTest
+import Testing
 
 @testable import AstroPics
 
-final class AstronomyPictureViewTests: XCTestCase {
-  override func setUpWithError() throws {
-    //    isRecording = true
+struct AstronomyPictureViewTests {
+  var record: SnapshotTestingConfiguration.Record
+
+  init() {
+    record = .never
   }
 
+  @Test @MainActor
   func testAstronomyPictureViewWithDate() {
     let view = AstronomyPictureView(
       astronomyPicture: AstronomyPicture(
@@ -23,10 +26,13 @@ final class AstronomyPictureViewTests: XCTestCase {
       isLoadingImagesEnabled: false
     )
 
-    assertSnapshot(matching: view.colorScheme(.light), as: .deviceImage(), named: "light")
-    assertSnapshot(matching: view.colorScheme(.dark), as: .deviceImage(), named: "dark")
+    withSnapshotTesting(record: record) {
+      assertSnapshot(of: view.colorScheme(.light), as: .deviceImage(), named: "light")
+      assertSnapshot(of: view.colorScheme(.dark), as: .deviceImage(), named: "dark")
+    }
   }
 
+  @Test @MainActor
   func testAstronomyPictureViewWithoutDate() {
     let view = AstronomyPictureView(
       astronomyPicture: AstronomyPicture(
@@ -41,10 +47,13 @@ final class AstronomyPictureViewTests: XCTestCase {
       isLoadingImagesEnabled: false
     )
 
-    assertSnapshot(matching: view.colorScheme(.light), as: .deviceImage(), named: "light")
-    assertSnapshot(matching: view.colorScheme(.dark), as: .deviceImage(), named: "dark")
+    withSnapshotTesting(record: record) {
+      assertSnapshot(of: view.colorScheme(.light), as: .deviceImage(), named: "light")
+      assertSnapshot(of: view.colorScheme(.dark), as: .deviceImage(), named: "dark")
+    }
   }
 
+  @Test @MainActor
   func testAstronomyPictureViewWithVideo() {
     let view = AstronomyPictureView(
       astronomyPicture: AstronomyPicture(
@@ -59,7 +68,9 @@ final class AstronomyPictureViewTests: XCTestCase {
       isLoadingImagesEnabled: false
     )
 
-    assertSnapshot(matching: view.colorScheme(.light), as: .deviceImage(), named: "light")
-    assertSnapshot(matching: view.colorScheme(.dark), as: .deviceImage(), named: "dark")
+    withSnapshotTesting(record: record) {
+      assertSnapshot(of: view.colorScheme(.light), as: .deviceImage(), named: "light")
+      assertSnapshot(of: view.colorScheme(.dark), as: .deviceImage(), named: "dark")
+    }
   }
 }

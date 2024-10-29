@@ -16,6 +16,18 @@
 		922DC7852C1A4A1100E90438 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922DC7842C1A4A1100E90438 /* HeaderView.swift */; };
 		92685A172CCDA60B0052019E /* testAstronomyPictureViewWithVideo.light.png in Resources */ = {isa = PBXBuildFile; fileRef = 92685A162CCDA60B0052019E /* testAstronomyPictureViewWithVideo.light.png */; };
 		92685A182CCDA60B0052019E /* testAstronomyPictureViewWithVideo.dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 92685A152CCDA60B0052019E /* testAstronomyPictureViewWithVideo.dark.png */; };
+		92685A7A2CD142FE0052019E /* testAstronomyPicturesViewLoadingState.dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 92685A742CD142FE0052019E /* testAstronomyPicturesViewLoadingState.dark.png */; };
+		92685A7B2CD142FE0052019E /* testAstronomyPicturesViewRefreshingState.dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 92685A762CD142FE0052019E /* testAstronomyPicturesViewRefreshingState.dark.png */; };
+		92685A7C2CD142FE0052019E /* testAstronomyPicturesViewRefreshingState.light.png in Resources */ = {isa = PBXBuildFile; fileRef = 92685A772CD142FE0052019E /* testAstronomyPicturesViewRefreshingState.light.png */; };
+		92685A7D2CD142FE0052019E /* testAstronomyPicturesViewSuccessState.dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 92685A782CD142FE0052019E /* testAstronomyPicturesViewSuccessState.dark.png */; };
+		92685A7E2CD142FE0052019E /* testAstronomyPicturesViewFailureState.dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 92685A722CD142FE0052019E /* testAstronomyPicturesViewFailureState.dark.png */; };
+		92685A7F2CD142FE0052019E /* testAstronomyPicturesViewFailureState.light.png in Resources */ = {isa = PBXBuildFile; fileRef = 92685A732CD142FE0052019E /* testAstronomyPicturesViewFailureState.light.png */; };
+		92685A802CD142FE0052019E /* testAstronomyPicturesViewLoadingState.light.png in Resources */ = {isa = PBXBuildFile; fileRef = 92685A752CD142FE0052019E /* testAstronomyPicturesViewLoadingState.light.png */; };
+		92685A812CD142FE0052019E /* testAstronomyPicturesViewSuccessState.light.png in Resources */ = {isa = PBXBuildFile; fileRef = 92685A792CD142FE0052019E /* testAstronomyPicturesViewSuccessState.light.png */; };
+		92685A862CD146650052019E /* testAstronomyPictureDetailViewWithImage.dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 92685A822CD146650052019E /* testAstronomyPictureDetailViewWithImage.dark.png */; };
+		92685A872CD146650052019E /* testAstronomyPictureDetailViewWithVideo.dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 92685A842CD146650052019E /* testAstronomyPictureDetailViewWithVideo.dark.png */; };
+		92685A882CD146650052019E /* testAstronomyPictureDetailViewWithVideo.light.png in Resources */ = {isa = PBXBuildFile; fileRef = 92685A852CD146650052019E /* testAstronomyPictureDetailViewWithVideo.light.png */; };
+		92685A892CD146650052019E /* testAstronomyPictureDetailViewWithImage.light.png in Resources */ = {isa = PBXBuildFile; fileRef = 92685A832CD146650052019E /* testAstronomyPictureDetailViewWithImage.light.png */; };
 		92A848FC2C1B00990083D03B /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A848FB2C1B00990083D03B /* ErrorView.swift */; };
 		92A849022C1B05170083D03B /* AstronomyPictureDetailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A849012C1B05170083D03B /* AstronomyPictureDetailTests.swift */; };
 		92A849042C1B07060083D03B /* AstronomyPicturesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A849032C1B07060083D03B /* AstronomyPicturesTests.swift */; };
@@ -26,22 +38,12 @@
 		92A849132C1B22020083D03B /* EnvironmentsValues+LoadingImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A849122C1B22020083D03B /* EnvironmentsValues+LoadingImages.swift */; };
 		92A849162C1B32E10083D03B /* HeaderViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A849152C1B32E10083D03B /* HeaderViewTests.swift */; };
 		92A849182C1B33420083D03B /* AstronomyPictureViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A849172C1B33420083D03B /* AstronomyPictureViewTests.swift */; };
-		92A8492B2C1B41760083D03B /* testAstronomyPicturesViewFailureState.dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 92A849192C1B41760083D03B /* testAstronomyPicturesViewFailureState.dark.png */; };
-		92A8492C2C1B41760083D03B /* testAstronomyPicturesViewFailureState.light.png in Resources */ = {isa = PBXBuildFile; fileRef = 92A8491A2C1B41760083D03B /* testAstronomyPicturesViewFailureState.light.png */; };
-		92A8492D2C1B41760083D03B /* testAstronomyPicturesViewLoadingState.dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 92A8491B2C1B41760083D03B /* testAstronomyPicturesViewLoadingState.dark.png */; };
-		92A8492E2C1B41760083D03B /* testAstronomyPicturesViewLoadingState.light.png in Resources */ = {isa = PBXBuildFile; fileRef = 92A8491C2C1B41760083D03B /* testAstronomyPicturesViewLoadingState.light.png */; };
-		92A8492F2C1B41760083D03B /* testAstronomyPicturesViewSuccessState.dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 92A8491D2C1B41760083D03B /* testAstronomyPicturesViewSuccessState.dark.png */; };
-		92A849302C1B41760083D03B /* testAstronomyPicturesViewSuccessState.light.png in Resources */ = {isa = PBXBuildFile; fileRef = 92A8491E2C1B41760083D03B /* testAstronomyPicturesViewSuccessState.light.png */; };
 		92A849312C1B41760083D03B /* testAstronomyPictureViewWithDate.dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 92A849202C1B41760083D03B /* testAstronomyPictureViewWithDate.dark.png */; };
 		92A849322C1B41760083D03B /* testAstronomyPictureViewWithDate.light.png in Resources */ = {isa = PBXBuildFile; fileRef = 92A849212C1B41760083D03B /* testAstronomyPictureViewWithDate.light.png */; };
 		92A849332C1B41760083D03B /* testAstronomyPictureViewWithoutDate.dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 92A849222C1B41760083D03B /* testAstronomyPictureViewWithoutDate.dark.png */; };
 		92A849342C1B41760083D03B /* testAstronomyPictureViewWithoutDate.light.png in Resources */ = {isa = PBXBuildFile; fileRef = 92A849232C1B41760083D03B /* testAstronomyPictureViewWithoutDate.light.png */; };
 		92A849372C1B41760083D03B /* testHeaderView.dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 92A849272C1B41760083D03B /* testHeaderView.dark.png */; };
 		92A849382C1B41760083D03B /* testHeaderView.light.png in Resources */ = {isa = PBXBuildFile; fileRef = 92A849282C1B41760083D03B /* testHeaderView.light.png */; };
-		92A8493F2C1B41890083D03B /* testAstronomyPictureDetailViewWithImage.dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 92A849392C1B41890083D03B /* testAstronomyPictureDetailViewWithImage.dark.png */; };
-		92A849402C1B41890083D03B /* testAstronomyPictureDetailViewWithImage.light.png in Resources */ = {isa = PBXBuildFile; fileRef = 92A8493A2C1B41890083D03B /* testAstronomyPictureDetailViewWithImage.light.png */; };
-		92A849412C1B41890083D03B /* testAstronomyPictureDetailViewWithVideo.dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 92A8493B2C1B41890083D03B /* testAstronomyPictureDetailViewWithVideo.dark.png */; };
-		92A849422C1B41890083D03B /* testAstronomyPictureDetailViewWithVideo.light.png in Resources */ = {isa = PBXBuildFile; fileRef = 92A8493C2C1B41890083D03B /* testAstronomyPictureDetailViewWithVideo.light.png */; };
 		92E31CB22C19B63C00948343 /* AstroPicsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E31CB12C19B63C00948343 /* AstroPicsApp.swift */; };
 		92E31CB62C19B63D00948343 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92E31CB52C19B63D00948343 /* Assets.xcassets */; };
 		92E31CBA2C19B63D00948343 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92E31CB92C19B63D00948343 /* Preview Assets.xcassets */; };
@@ -60,8 +62,6 @@
 		92E31D0A2C19CDEF00948343 /* AstronomyPicturesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E31D082C19CDEF00948343 /* AstronomyPicturesView.swift */; };
 		92E31D0B2C19CDEF00948343 /* AstronomyPictures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E31D092C19CDEF00948343 /* AstronomyPictures.swift */; };
 		92E31D122C19D60C00948343 /* AstronomyPicturesUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E31D112C19D60C00948343 /* AstronomyPicturesUseCaseTests.swift */; };
-		92E37C8B2C7539C60047293A /* testAstronomyPicturesViewRefreshingState.light.png in Resources */ = {isa = PBXBuildFile; fileRef = 92E37C892C7539C60047293A /* testAstronomyPicturesViewRefreshingState.light.png */; };
-		92E37C8C2C7539C60047293A /* testAstronomyPicturesViewRefreshingState.dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 92E37C8A2C7539C60047293A /* testAstronomyPicturesViewRefreshingState.dark.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +84,18 @@
 		922DC7842C1A4A1100E90438 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		92685A152CCDA60B0052019E /* testAstronomyPictureViewWithVideo.dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testAstronomyPictureViewWithVideo.dark.png; sourceTree = "<group>"; };
 		92685A162CCDA60B0052019E /* testAstronomyPictureViewWithVideo.light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testAstronomyPictureViewWithVideo.light.png; sourceTree = "<group>"; };
+		92685A722CD142FE0052019E /* testAstronomyPicturesViewFailureState.dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testAstronomyPicturesViewFailureState.dark.png; sourceTree = "<group>"; };
+		92685A732CD142FE0052019E /* testAstronomyPicturesViewFailureState.light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testAstronomyPicturesViewFailureState.light.png; sourceTree = "<group>"; };
+		92685A742CD142FE0052019E /* testAstronomyPicturesViewLoadingState.dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testAstronomyPicturesViewLoadingState.dark.png; sourceTree = "<group>"; };
+		92685A752CD142FE0052019E /* testAstronomyPicturesViewLoadingState.light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testAstronomyPicturesViewLoadingState.light.png; sourceTree = "<group>"; };
+		92685A762CD142FE0052019E /* testAstronomyPicturesViewRefreshingState.dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testAstronomyPicturesViewRefreshingState.dark.png; sourceTree = "<group>"; };
+		92685A772CD142FE0052019E /* testAstronomyPicturesViewRefreshingState.light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testAstronomyPicturesViewRefreshingState.light.png; sourceTree = "<group>"; };
+		92685A782CD142FE0052019E /* testAstronomyPicturesViewSuccessState.dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testAstronomyPicturesViewSuccessState.dark.png; sourceTree = "<group>"; };
+		92685A792CD142FE0052019E /* testAstronomyPicturesViewSuccessState.light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testAstronomyPicturesViewSuccessState.light.png; sourceTree = "<group>"; };
+		92685A822CD146650052019E /* testAstronomyPictureDetailViewWithImage.dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testAstronomyPictureDetailViewWithImage.dark.png; sourceTree = "<group>"; };
+		92685A832CD146650052019E /* testAstronomyPictureDetailViewWithImage.light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testAstronomyPictureDetailViewWithImage.light.png; sourceTree = "<group>"; };
+		92685A842CD146650052019E /* testAstronomyPictureDetailViewWithVideo.dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testAstronomyPictureDetailViewWithVideo.dark.png; sourceTree = "<group>"; };
+		92685A852CD146650052019E /* testAstronomyPictureDetailViewWithVideo.light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testAstronomyPictureDetailViewWithVideo.light.png; sourceTree = "<group>"; };
 		92A848FB2C1B00990083D03B /* ErrorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		92A849012C1B05170083D03B /* AstronomyPictureDetailTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyPictureDetailTests.swift; sourceTree = "<group>"; };
 		92A849032C1B07060083D03B /* AstronomyPicturesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyPicturesTests.swift; sourceTree = "<group>"; };
@@ -93,22 +105,12 @@
 		92A849122C1B22020083D03B /* EnvironmentsValues+LoadingImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EnvironmentsValues+LoadingImages.swift"; sourceTree = "<group>"; };
 		92A849152C1B32E10083D03B /* HeaderViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewTests.swift; sourceTree = "<group>"; };
 		92A849172C1B33420083D03B /* AstronomyPictureViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyPictureViewTests.swift; sourceTree = "<group>"; };
-		92A849192C1B41760083D03B /* testAstronomyPicturesViewFailureState.dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testAstronomyPicturesViewFailureState.dark.png; sourceTree = "<group>"; };
-		92A8491A2C1B41760083D03B /* testAstronomyPicturesViewFailureState.light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testAstronomyPicturesViewFailureState.light.png; sourceTree = "<group>"; };
-		92A8491B2C1B41760083D03B /* testAstronomyPicturesViewLoadingState.dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testAstronomyPicturesViewLoadingState.dark.png; sourceTree = "<group>"; };
-		92A8491C2C1B41760083D03B /* testAstronomyPicturesViewLoadingState.light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testAstronomyPicturesViewLoadingState.light.png; sourceTree = "<group>"; };
-		92A8491D2C1B41760083D03B /* testAstronomyPicturesViewSuccessState.dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testAstronomyPicturesViewSuccessState.dark.png; sourceTree = "<group>"; };
-		92A8491E2C1B41760083D03B /* testAstronomyPicturesViewSuccessState.light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testAstronomyPicturesViewSuccessState.light.png; sourceTree = "<group>"; };
 		92A849202C1B41760083D03B /* testAstronomyPictureViewWithDate.dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testAstronomyPictureViewWithDate.dark.png; sourceTree = "<group>"; };
 		92A849212C1B41760083D03B /* testAstronomyPictureViewWithDate.light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testAstronomyPictureViewWithDate.light.png; sourceTree = "<group>"; };
 		92A849222C1B41760083D03B /* testAstronomyPictureViewWithoutDate.dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testAstronomyPictureViewWithoutDate.dark.png; sourceTree = "<group>"; };
 		92A849232C1B41760083D03B /* testAstronomyPictureViewWithoutDate.light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testAstronomyPictureViewWithoutDate.light.png; sourceTree = "<group>"; };
 		92A849272C1B41760083D03B /* testHeaderView.dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testHeaderView.dark.png; sourceTree = "<group>"; };
 		92A849282C1B41760083D03B /* testHeaderView.light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testHeaderView.light.png; sourceTree = "<group>"; };
-		92A849392C1B41890083D03B /* testAstronomyPictureDetailViewWithImage.dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testAstronomyPictureDetailViewWithImage.dark.png; sourceTree = "<group>"; };
-		92A8493A2C1B41890083D03B /* testAstronomyPictureDetailViewWithImage.light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testAstronomyPictureDetailViewWithImage.light.png; sourceTree = "<group>"; };
-		92A8493B2C1B41890083D03B /* testAstronomyPictureDetailViewWithVideo.dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testAstronomyPictureDetailViewWithVideo.dark.png; sourceTree = "<group>"; };
-		92A8493C2C1B41890083D03B /* testAstronomyPictureDetailViewWithVideo.light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testAstronomyPictureDetailViewWithVideo.light.png; sourceTree = "<group>"; };
 		92E31CAE2C19B63C00948343 /* AstroPics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AstroPics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92E31CB12C19B63C00948343 /* AstroPicsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstroPicsApp.swift; sourceTree = "<group>"; };
 		92E31CB52C19B63D00948343 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -129,8 +131,6 @@
 		92E31D082C19CDEF00948343 /* AstronomyPicturesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyPicturesView.swift; sourceTree = "<group>"; };
 		92E31D092C19CDEF00948343 /* AstronomyPictures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyPictures.swift; sourceTree = "<group>"; };
 		92E31D112C19D60C00948343 /* AstronomyPicturesUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyPicturesUseCaseTests.swift; sourceTree = "<group>"; };
-		92E37C892C7539C60047293A /* testAstronomyPicturesViewRefreshingState.light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testAstronomyPicturesViewRefreshingState.light.png; sourceTree = "<group>"; };
-		92E37C8A2C7539C60047293A /* testAstronomyPicturesViewRefreshingState.dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testAstronomyPicturesViewRefreshingState.dark.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -259,14 +259,14 @@
 		92A8491F2C1B41760083D03B /* AstronomyPicturesViewTests */ = {
 			isa = PBXGroup;
 			children = (
-				92A849192C1B41760083D03B /* testAstronomyPicturesViewFailureState.dark.png */,
-				92A8491A2C1B41760083D03B /* testAstronomyPicturesViewFailureState.light.png */,
-				92A8491B2C1B41760083D03B /* testAstronomyPicturesViewLoadingState.dark.png */,
-				92A8491C2C1B41760083D03B /* testAstronomyPicturesViewLoadingState.light.png */,
-				92E37C8A2C7539C60047293A /* testAstronomyPicturesViewRefreshingState.dark.png */,
-				92E37C892C7539C60047293A /* testAstronomyPicturesViewRefreshingState.light.png */,
-				92A8491D2C1B41760083D03B /* testAstronomyPicturesViewSuccessState.dark.png */,
-				92A8491E2C1B41760083D03B /* testAstronomyPicturesViewSuccessState.light.png */,
+				92685A722CD142FE0052019E /* testAstronomyPicturesViewFailureState.dark.png */,
+				92685A732CD142FE0052019E /* testAstronomyPicturesViewFailureState.light.png */,
+				92685A742CD142FE0052019E /* testAstronomyPicturesViewLoadingState.dark.png */,
+				92685A752CD142FE0052019E /* testAstronomyPicturesViewLoadingState.light.png */,
+				92685A762CD142FE0052019E /* testAstronomyPicturesViewRefreshingState.dark.png */,
+				92685A772CD142FE0052019E /* testAstronomyPicturesViewRefreshingState.light.png */,
+				92685A782CD142FE0052019E /* testAstronomyPicturesViewSuccessState.dark.png */,
+				92685A792CD142FE0052019E /* testAstronomyPicturesViewSuccessState.light.png */,
 			);
 			path = AstronomyPicturesViewTests;
 			sourceTree = "<group>";
@@ -306,10 +306,10 @@
 		92A8493D2C1B41890083D03B /* AstronomyPictureDetailViewTests */ = {
 			isa = PBXGroup;
 			children = (
-				92A849392C1B41890083D03B /* testAstronomyPictureDetailViewWithImage.dark.png */,
-				92A8493A2C1B41890083D03B /* testAstronomyPictureDetailViewWithImage.light.png */,
-				92A8493B2C1B41890083D03B /* testAstronomyPictureDetailViewWithVideo.dark.png */,
-				92A8493C2C1B41890083D03B /* testAstronomyPictureDetailViewWithVideo.light.png */,
+				92685A822CD146650052019E /* testAstronomyPictureDetailViewWithImage.dark.png */,
+				92685A832CD146650052019E /* testAstronomyPictureDetailViewWithImage.light.png */,
+				92685A842CD146650052019E /* testAstronomyPictureDetailViewWithVideo.dark.png */,
+				92685A852CD146650052019E /* testAstronomyPictureDetailViewWithVideo.light.png */,
 			);
 			path = AstronomyPictureDetailViewTests;
 			sourceTree = "<group>";
@@ -580,26 +580,26 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92A849412C1B41890083D03B /* testAstronomyPictureDetailViewWithVideo.dark.png in Resources */,
 				92A849322C1B41760083D03B /* testAstronomyPictureViewWithDate.light.png in Resources */,
-				92A8492D2C1B41760083D03B /* testAstronomyPicturesViewLoadingState.dark.png in Resources */,
-				92A8492E2C1B41760083D03B /* testAstronomyPicturesViewLoadingState.light.png in Resources */,
-				92E37C8C2C7539C60047293A /* testAstronomyPicturesViewRefreshingState.dark.png in Resources */,
 				92A849372C1B41760083D03B /* testHeaderView.dark.png in Resources */,
-				92A8493F2C1B41890083D03B /* testAstronomyPictureDetailViewWithImage.dark.png in Resources */,
 				92A849342C1B41760083D03B /* testAstronomyPictureViewWithoutDate.light.png in Resources */,
-				92A849422C1B41890083D03B /* testAstronomyPictureDetailViewWithVideo.light.png in Resources */,
 				92A849332C1B41760083D03B /* testAstronomyPictureViewWithoutDate.dark.png in Resources */,
-				92E37C8B2C7539C60047293A /* testAstronomyPicturesViewRefreshingState.light.png in Resources */,
-				92A8492B2C1B41760083D03B /* testAstronomyPicturesViewFailureState.dark.png in Resources */,
-				92A8492F2C1B41760083D03B /* testAstronomyPicturesViewSuccessState.dark.png in Resources */,
 				92685A172CCDA60B0052019E /* testAstronomyPictureViewWithVideo.light.png in Resources */,
 				92685A182CCDA60B0052019E /* testAstronomyPictureViewWithVideo.dark.png in Resources */,
-				92A849302C1B41760083D03B /* testAstronomyPicturesViewSuccessState.light.png in Resources */,
 				92A849312C1B41760083D03B /* testAstronomyPictureViewWithDate.dark.png in Resources */,
-				92A8492C2C1B41760083D03B /* testAstronomyPicturesViewFailureState.light.png in Resources */,
+				92685A7A2CD142FE0052019E /* testAstronomyPicturesViewLoadingState.dark.png in Resources */,
+				92685A7B2CD142FE0052019E /* testAstronomyPicturesViewRefreshingState.dark.png in Resources */,
+				92685A7C2CD142FE0052019E /* testAstronomyPicturesViewRefreshingState.light.png in Resources */,
+				92685A862CD146650052019E /* testAstronomyPictureDetailViewWithImage.dark.png in Resources */,
+				92685A872CD146650052019E /* testAstronomyPictureDetailViewWithVideo.dark.png in Resources */,
+				92685A882CD146650052019E /* testAstronomyPictureDetailViewWithVideo.light.png in Resources */,
+				92685A892CD146650052019E /* testAstronomyPictureDetailViewWithImage.light.png in Resources */,
+				92685A7D2CD142FE0052019E /* testAstronomyPicturesViewSuccessState.dark.png in Resources */,
+				92685A7E2CD142FE0052019E /* testAstronomyPicturesViewFailureState.dark.png in Resources */,
+				92685A7F2CD142FE0052019E /* testAstronomyPicturesViewFailureState.light.png in Resources */,
+				92685A802CD142FE0052019E /* testAstronomyPicturesViewLoadingState.light.png in Resources */,
+				92685A812CD142FE0052019E /* testAstronomyPicturesViewSuccessState.light.png in Resources */,
 				92A849382C1B41760083D03B /* testHeaderView.light.png in Resources */,
-				92A849402C1B41890083D03B /* testAstronomyPictureDetailViewWithImage.light.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -802,7 +802,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.5;
@@ -841,7 +841,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.5;
@@ -865,7 +865,7 @@
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = D9DND379G3;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				MACOSX_DEPLOYMENT_TARGET = 14.5;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = co.pijp.AstroPicsTests;
@@ -888,7 +888,7 @@
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = D9DND379G3;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				MACOSX_DEPLOYMENT_TARGET = 14.5;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = co.pijp.AstroPicsTests;

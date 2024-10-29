@@ -1,9 +1,11 @@
 import Dependencies
-import XCTest
+import Foundation
+import Testing
 
 @testable import AstroPics
 
-class AstronomyPicturesUseCaseTests: XCTestCase {
+struct AstronomyPicturesUseCaseTests {
+  @Test
   func testFetchAstronomyPicturesSuccess() async {
     // Given
     let useCase = AstronomyPicturesUseCaseImpl(
@@ -17,12 +19,13 @@ class AstronomyPicturesUseCaseTests: XCTestCase {
     // Then
     switch result {
     case .success(let pictures):
-      XCTAssertEqual(pictures.count, 6)
+      #expect(pictures.count == 6)
     case .failure:
-      XCTFail("Expected success but got failure")
+      #expect(Bool(false), "Expected success but got failure")
     }
   }
 
+  @Test
   func testFetchAstronomyPicturesFailure() async {
     // Given
     let useCase = AstronomyPicturesUseCaseImpl(
@@ -36,11 +39,10 @@ class AstronomyPicturesUseCaseTests: XCTestCase {
     // Then
     switch result {
     case .success:
-      XCTFail("Expected failure but got success")
+      #expect(Bool(false), "Expected failure but got success")
     case .failure(let error):
-      XCTAssertEqual(
-        error,
-        .cannotLoadPictures(error: "The operation couldn’t be completed. (AstroPics.APIError error 0.)")
+      #expect(
+        error == .cannotLoadPictures(error: "The operation couldn’t be completed. (AstroPics.APIError error 0.)")
       )
     }
   }
