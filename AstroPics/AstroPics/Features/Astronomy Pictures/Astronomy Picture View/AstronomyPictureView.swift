@@ -52,6 +52,12 @@ struct AstronomyPictureView: View {
         VStack(alignment: .leading) {
           if let date = astronomyPicture.date {
             HStack {
+              if astronomyPicture.hasVideoContent {
+                Image("PlayIcon")
+                  .resizable()
+                  .frame(width: 15, height: 15)
+                  .foregroundColor(.white)
+              }
               Spacer()
               Text(date)
                 .foregroundColor(.white)
