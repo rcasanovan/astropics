@@ -86,7 +86,7 @@ extension AstronomyPicturesView {
                   date: Placeholder.shortText,
                   title: Placeholder.longText,
                   url: nil,
-                  hasVideoContent: false,
+                  contentType: .image,
                   explanation: Placeholder.longText
                 ),
               isLoadingImagesEnabled: isLoadingImagesEnabled

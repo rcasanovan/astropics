@@ -8,7 +8,7 @@ struct AstronomyPictureView: View {
 
   var body: some View {
     ZStack {
-      if astronomyPicture.hasVideoContent {
+      if astronomyPicture.contentType == .video {
         Color.black
           .frame(maxHeight: 140)
       } else {
@@ -52,7 +52,7 @@ struct AstronomyPictureView: View {
         VStack(alignment: .leading) {
           if let date = astronomyPicture.date {
             HStack {
-              if astronomyPicture.hasVideoContent {
+              if astronomyPicture.contentType == .video {
                 Image("PlayIcon")
                   .resizable()
                   .frame(width: 15, height: 15)
@@ -93,7 +93,7 @@ struct AstronomyPictureView: View {
       date: "2024-01-01",
       title: "NGC 1232: A Grand Design Spiral Galaxy",
       url: URL(string: "https://apod.nasa.gov/apod/image/2401/ngc1232b_vlt_960.jpg")!,
-      hasVideoContent: false,
+      contentType: .image,
       explanation:
         "Can a rocket make the Moon ripple?."
     ),
@@ -109,7 +109,7 @@ struct AstronomyPictureView: View {
       date: nil,
       title: "NGC 1232: A Grand Design Spiral Galaxy",
       url: URL(string: "https://apod.nasa.gov/apod/image/2401/ngc1232b_vlt_960.jpg")!,
-      hasVideoContent: false,
+      contentType: .image,
       explanation:
         "Can a rocket make the Moon ripple?."
     ),
@@ -125,7 +125,7 @@ struct AstronomyPictureView: View {
       date: "2024-01-06",
       title: "The Snows of Churyumov-Gerasimenko",
       url: URL(string: "https://www.youtube.com/embed/PpyPgJHKxSw?rel=0")!,
-      hasVideoContent: true,
+      contentType: .video,
       explanation:
         "Can a rocket make the Moon ripple?."
     ),

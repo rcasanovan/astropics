@@ -35,12 +35,19 @@ struct AstronomyPicturesTests {
 
         let hashID = combinedID.hash
 
+        let contentType: AstronomyPicture.AstronomyPictureContentType =
+          switch $0.media_type {
+          case .video: .video
+          case .image: .image
+          default: .other
+          }
+
         return AstronomyPicture(
           id: String(hashID),
           date: Date.transformDateStringToCurrentLocale($0.date, locale: locale),
           title: $0.title,
           url: $0.url,
-          hasVideoContent: $0.media_type == .video,
+          contentType: contentType,
           explanation: $0.explanation
         )
       }

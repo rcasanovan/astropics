@@ -5,8 +5,14 @@ public struct AstronomyPicture: Equatable, Identifiable, Hashable {
   let date: String?
   let title: String
   let url: URL?
-  let hasVideoContent: Bool
+  let contentType: AstronomyPictureContentType
   let explanation: String
+
+  enum AstronomyPictureContentType {
+    case image
+    case video
+    case other
+  }
 }
 
 // MARK: Errors
@@ -41,12 +47,19 @@ public struct AstronomyPicturesUseCaseImpl: AstronomyPicturesUseCase {
             // Hash the combined string to produce a unique identifier
             let hashID = combinedID.hash
 
+            let contentType: AstronomyPicture.AstronomyPictureContentType =
+              switch dataModel.media_type {
+              case .video: .video
+              case .image: .image
+              default: .other
+              }
+
             return AstronomyPicture(
               id: String(hashID),
               date: Date.transformDateStringToCurrentLocale(dataModel.date, locale: locale),
               title: dataModel.title,
               url: dataModel.url,
-              hasVideoContent: dataModel.media_type == .video,
+              contentType: contentType,
               explanation: dataModel.explanation
             )
           }

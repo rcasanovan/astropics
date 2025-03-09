@@ -19,7 +19,7 @@ struct AstronomyPictureViewTests {
         date: "2024-01-01",
         title: "NGC 1232: A Grand Design Spiral Galaxy",
         url: URL(string: "https://apod.nasa.gov/apod/image/2401/ngc1232b_vlt_960.jpg")!,
-        hasVideoContent: false,
+        contentType: .image,
         explanation:
           "Can a rocket make the Moon ripple?."
       ),
@@ -40,7 +40,7 @@ struct AstronomyPictureViewTests {
         date: nil,
         title: "NGC 1232: A Grand Design Spiral Galaxy",
         url: URL(string: "https://apod.nasa.gov/apod/image/2401/ngc1232b_vlt_960.jpg")!,
-        hasVideoContent: false,
+        contentType: .image,
         explanation:
           "Can a rocket make the Moon ripple?."
       ),
@@ -61,7 +61,7 @@ struct AstronomyPictureViewTests {
         date: "2024-01-06",
         title: "The Snows of Churyumov-Gerasimenko",
         url: URL(string: "https://www.youtube.com/embed/PpyPgJHKxSw?rel=0")!,
-        hasVideoContent: true,
+        contentType: .video,
         explanation:
           "Can a rocket make the Moon ripple?."
       ),
