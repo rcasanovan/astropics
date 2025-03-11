@@ -1,4 +1,4 @@
-# <img src="assets/icon.png" width="20" height="20"> astropics
+# <img src="https://github.com/rcasanovan/astropics/blob/main/Images/AstroPicsIcon.png" width="30" height="30"> astropics
 
 This demo implements a very simple app to show the last seven(7) days pictures / videos from NASA.
 
