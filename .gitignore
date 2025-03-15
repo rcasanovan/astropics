@@ -1,6 +1,28 @@
+## Build generated
+build/*
+ios/build
+builds/*
+DerivedData
+vendor/bundle
 
-# Ignore Xcode's user-specific files
-*.xcuserstate
-*.xcscheme
-**/.swiftpm/xcode/xcuserdata/*/xcschememanagement.plist
+.bundle.json
 
+AstroPics/!AstroPics.xcworkspace/xcshareddata/xcschemes
+AstroPics/AstroPics.xcworkspace/xcuserdata/*
+AstroPics/!AstroPics.xcodeproj/xcshareddata/xcschemes
+AstroPics/AstroPics.xcodeproj/xcuserdata/*
+AstroPics/AstroPics.xcodeproj/project.xcworkspace/xcuserdata
+AstroPics/.xcode.env.local
+
+node_modules
+
+.DS_Store
+
+# fastlane build artifacts
+*.ipa
+*.dSYM.zip
+fastlane/test_output/
+fastlane/report.xml
+
+LICENSE
+tx
