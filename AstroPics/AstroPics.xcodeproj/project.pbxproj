@@ -101,7 +101,6 @@
 			packageProductDependencies = (
 				92E31CF72C19BAF000948343 /* ComposableArchitecture */,
 				92A9AC1D2D82450400FC2526 /* AstronomyPicturesFeature */,
-				9221773E2D85D1CF0081120F /* App */,
 				921B78B12D85D4B500B4CC15 /* AstronomyPictureDetailFeature */,
 			);
 			productName = AstroPics;
@@ -409,10 +408,6 @@
 		921B78B12D85D4B500B4CC15 /* AstronomyPictureDetailFeature */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = AstronomyPictureDetailFeature;
-		};
-		9221773E2D85D1CF0081120F /* App */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = App;
 		};
 		92A9AC1D2D82450400FC2526 /* AstronomyPicturesFeature */ = {
 			isa = XCSwiftPackageProductDependency;
