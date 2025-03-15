@@ -1,6 +1,6 @@
 
 # Ignore Xcode's user-specific files
 *.xcuserstate
-xcuserdata/
 *.xcscheme
-*.xcschememanagement.plist
+**/.swiftpm/xcode/xcuserdata/*/xcschememanagement.plist
+
