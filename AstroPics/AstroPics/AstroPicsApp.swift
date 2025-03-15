@@ -1,3 +1,4 @@
+import AstronomyPicturesFeature
 import SwiftUI
 
 @main
