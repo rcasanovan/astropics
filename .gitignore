@@ -13,6 +13,7 @@ AstroPics/!AstroPics.xcodeproj/xcshareddata/xcschemes
 AstroPics/AstroPics.xcodeproj/xcuserdata/*
 AstroPics/AstroPics.xcodeproj/project.xcworkspace/xcuserdata
 AstroPics/.xcode.env.local
+AstroPics/AstroPics/App/.swiftpm/xcode/xcuserdata/*
 
 node_modules
 
