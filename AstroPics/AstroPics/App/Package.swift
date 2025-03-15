@@ -13,7 +13,7 @@ let package = Package(
     .library(name: "AstronomyPicturesFeature", targets: ["AstronomyPicturesFeature"]),
   ],
   dependencies: [
-    .package(url: "https://github.com/pointfreeco/swift-composable-architecture.git", .upToNextMinor(from: "1.18.0")),
+    .package(url: "https://github.com/pointfreeco/swift-composable-architecture.git", .upToNextMinor(from: "1.17.1")),
     .package(url: "https://github.com/pointfreeco/swift-snapshot-testing.git", .upToNextMajor(from: "1.18.1")),
   ],
   targets: [
