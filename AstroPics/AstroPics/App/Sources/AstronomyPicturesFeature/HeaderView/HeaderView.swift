@@ -6,7 +6,7 @@ public struct HeaderView: View {
   public var body: some View {
     HStack {
       Spacer()
-      Image("NASAIcon")
+      Image.NASAIcon
         .resizable()
         .scaledToFit()
         .foregroundColor(.white)

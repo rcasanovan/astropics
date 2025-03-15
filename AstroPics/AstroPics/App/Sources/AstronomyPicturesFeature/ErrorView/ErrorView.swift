@@ -3,15 +3,15 @@ import SwiftUI
 public struct ErrorView: View {
   let error: String
   let didTapOnReload: (() -> Void)
-    
-    public init(error: String, didTapOnReload: @escaping () -> Void) {
-        self.error = error
-        self.didTapOnReload = didTapOnReload
-    }
 
-    public var body: some View {
+  public init(error: String, didTapOnReload: @escaping () -> Void) {
+    self.error = error
+    self.didTapOnReload = didTapOnReload
+  }
+
+  public var body: some View {
     VStack(alignment: /*@START_MENU_TOKEN@*/ .center /*@END_MENU_TOKEN@*/) {
-      Image("ErrorIcon")
+      Image.errorIcon
         .resizable()
         .frame(width: 80, height: 80)
 

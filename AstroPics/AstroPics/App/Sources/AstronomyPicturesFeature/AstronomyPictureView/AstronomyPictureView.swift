@@ -53,7 +53,7 @@ public struct AstronomyPictureView: View {
           if let date = astronomyPicture.date {
             HStack {
               if astronomyPicture.contentType == .video {
-                Image("PlayIcon")
+                Image.playIcon
                   .resizable()
                   .frame(width: 15, height: 15)
                   .foregroundColor(.white)

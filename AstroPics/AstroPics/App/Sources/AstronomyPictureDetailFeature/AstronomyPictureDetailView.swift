@@ -76,7 +76,7 @@ public struct AstronomyPictureDetailView: View {
                   store.send(.didTapOnLoadContent)
                 },
                 label: {
-                  Image("PlayIcon")
+                    Image.playIcon
                     .resizable()
                     .frame(width: 70, height: 70)
                     .foregroundColor(.white)
@@ -106,7 +106,7 @@ public struct AstronomyPictureDetailView: View {
           Button(action: {
             store.send(.didTapOnLoadContent)
           }) {
-            Image("FullScreenIcon")
+              Image.fullScreenIcon
               .foregroundColor(.white)
           }
         }
