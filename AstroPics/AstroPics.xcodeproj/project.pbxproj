@@ -17,6 +17,7 @@
 
 /* Begin PBXFileReference section */
 		9221773D2D85D08A0081120F /* App */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = App; sourceTree = "<group>"; };
+		924641ED2D87AEB100421EFB /* AstroPicsTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = AstroPicsTests.xctestplan; sourceTree = "<group>"; };
 		92E31CAE2C19B63C00948343 /* AstroPics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AstroPics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92E31CB12C19B63C00948343 /* AstroPicsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstroPicsApp.swift; sourceTree = "<group>"; };
 		92E31CB52C19B63D00948343 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -41,6 +42,7 @@
 		92E31CA52C19B63C00948343 = {
 			isa = PBXGroup;
 			children = (
+				924641ED2D87AEB100421EFB /* AstroPicsTests.xctestplan */,
 				92E31CB02C19B63C00948343 /* AstroPics */,
 				92E31CAF2C19B63C00948343 /* Products */,
 				92E31CF62C19BAF000948343 /* Frameworks */,

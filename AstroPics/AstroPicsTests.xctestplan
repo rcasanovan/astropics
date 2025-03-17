@@ -1,0 +1,59 @@
+{
+  "configurations" : [
+    {
+      "id" : "CCD02B14-C10E-4AB7-8ABA-2B77888FD120",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:",
+        "identifier" : "UtilsTests",
+        "name" : "UtilsTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:",
+        "identifier" : "AstronomyPicturesFeatureTests",
+        "name" : "AstronomyPicturesFeatureTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:",
+        "identifier" : "AstronomyPictureDetailSnapshotTests",
+        "name" : "AstronomyPictureDetailSnapshotTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:",
+        "identifier" : "AstronomyPictureDetailFeatureTests",
+        "name" : "AstronomyPictureDetailFeatureTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:",
+        "identifier" : "NetworkingTests",
+        "name" : "NetworkingTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:",
+        "identifier" : "AstronomyPicturesSnapshotTests",
+        "name" : "AstronomyPicturesSnapshotTests"
+      }
+    }
+  ],
+  "version" : 1
+}
