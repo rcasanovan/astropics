@@ -39,11 +39,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		92E31CA52C19B63C00948343 = {
+		924641EE2D87AFC800421EFB /* Tests */ = {
 			isa = PBXGroup;
 			children = (
 				924641ED2D87AEB100421EFB /* AstroPicsTests.xctestplan */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		92E31CA52C19B63C00948343 = {
+			isa = PBXGroup;
+			children = (
 				92E31CB02C19B63C00948343 /* AstroPics */,
+				924641EE2D87AFC800421EFB /* Tests */,
 				92E31CAF2C19B63C00948343 /* Products */,
 				92E31CF62C19BAF000948343 /* Frameworks */,
 			);
